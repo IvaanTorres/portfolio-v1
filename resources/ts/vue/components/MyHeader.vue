@@ -1,0 +1,47 @@
+<template>
+  <header class="relative">
+    <MyParticles />
+    <div
+      class="
+        flex
+        justify-start
+        sm:justify-start
+        items-center
+        w-full
+        h-screen
+        absolute
+        top-0
+        z-30
+      "
+    >
+      <div class="text-left sm:text-left ml-10 sm:ml-24 text-white">
+        <p class="mb-4">Hello</p>
+        <h1 class="text-6xl mb-5">Iván Torres García</h1>
+        <h2 class="text-3xl mb-10">Iván Torres García</h2>
+        <a
+          href="#"
+          class="
+            inline-block
+            px-14
+            py-3
+            bg-yellow-300
+            hover:bg-yellow-400
+            text-black
+            font-bold
+            ease-in
+            duration-75
+          "
+          >Ver</a
+        >
+        <p class="rotate-90 hidden sm:block absolute right-0 top-2/4">
+          - Scroll down -
+        </p>
+      </div>
+    </div>
+  </header>
+</template>
+
+<script lang="ts" setup>
+//! COMPONENTS
+import MyParticles from "./MyParticlesJs.vue";
+</script>

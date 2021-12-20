@@ -1,19 +1,9 @@
 <template>
-  <h1 class="text-3xl">{{ hello }}</h1>
+  <my-header class="h-screen"></my-header>
+  <p>Hey</p>
 </template>
 
-<script lang="ts">
-import { defineComponent, ref } from "vue";
-
-export default defineComponent({
-  setup() {
-    const hello = ref("hello");
-
-    return {
-      hello,
-    };
-  },
-});
+<script lang="ts" setup>
+//! COMPONENTS
+import MyHeader from "../components/MyHeader.vue";
 </script>
-
-<style lang="scss"></style>
