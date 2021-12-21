@@ -13,12 +13,6 @@
         z-50
       "
     >
-      <!-- <img
-        src="https://icones.pro/wp-content/uploads/2021/02/google-icone-symbole-png-logo-jaune.png"
-        alt="#"
-        width="50"
-        height="50"
-      /> -->
       <span
         class="hidden sm:block font-extrabold text-xl text-white py-4 font-mono"
         >&#60;ITG /&#62;</span
@@ -45,7 +39,4 @@ a.router-link-exact-active {
 * {
   font-family: "Sora";
 }
-/* html {
-  overflow-x: hidden;
-} */
 </style>

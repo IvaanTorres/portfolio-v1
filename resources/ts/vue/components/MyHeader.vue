@@ -15,9 +15,9 @@
       "
     >
       <div class="text-left sm:text-left ml-10 sm:ml-24 text-white">
-        <p class="mb-4">Hello</p>
-        <h1 class="text-6xl mb-5">Iván Torres García</h1>
-        <h2 class="text-3xl mb-10">Iván Torres García</h2>
+        <p class="mb-4">Welcome</p>
+        <h1 class="text-6xl mb-5 font-extrabold">Iván Torres García</h1>
+        <h2 class="text-3xl mb-10">Full-Stack Developer</h2>
         <a
           href="#"
           class="
@@ -30,8 +30,9 @@
             font-bold
             ease-in
             duration-75
+            rounded-full
           "
-          >Ver</a
+          >Download CV</a
         >
         <p class="rotate-90 hidden sm:block absolute right-0 top-2/4">
           - Scroll down -
