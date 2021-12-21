@@ -40,10 +40,10 @@
         p-6
       "
     >
-      <p class="text-sm py-2">
+      <p class="hidden sm:inline-block text-sm py-2">
         Iván Torres García - ivantorresgarcia.02@gmail.com
       </p>
-      <div class="flex gap-4 text-3xl">
+      <div class="flex gap-4 text-3xl justify-center">
         <a
           target="_blank"
           href="https://www.linkedin.com/in/ivan-torres-garcia/"

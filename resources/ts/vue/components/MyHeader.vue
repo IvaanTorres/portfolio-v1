@@ -4,7 +4,7 @@
     <div
       class="
         flex
-        justify-start
+        justify-center
         sm:justify-start
         items-center
         w-full
@@ -14,10 +14,12 @@
         z-30
       "
     >
-      <div class="text-left sm:text-left ml-10 sm:ml-24 text-white">
+      <div class="text-center sm:text-left sm:ml-24 text-white">
         <p class="mb-4">Welcome</p>
-        <h1 class="text-6xl mb-5 font-extrabold">Iván Torres García</h1>
-        <h2 class="text-3xl mb-10">Full-Stack Developer</h2>
+        <h1 class="text-3xl sm:text-5xl md:text-6xl mb-5 font-extrabold">
+          Iván Torres García
+        </h1>
+        <h2 class="text-xl sm:text-3xl mb-10">Full-Stack Developer</h2>
         <a
           href="#"
           class="

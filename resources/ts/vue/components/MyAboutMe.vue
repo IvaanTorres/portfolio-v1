@@ -1,11 +1,11 @@
 <template>
-  <section tabindex="-1" id="about" class="md:w-3/4 md:m-auto">
-    <div class="grid grid-cols-1 lg:grid-cols-2 mt-10 gap-14">
+  <section id="about" class="md:w-3/4 md:m-auto m-5">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-14 sm:mt-10">
       <img
         src="../../../assets/img/profile.jpg"
         alt="Profile photo"
         width="100%"
-        height="40px"
+        height="auto"
       />
       <div class="flex items-start justify-between flex-col text-sm">
         <div>
@@ -19,28 +19,20 @@
           <hr />
           <div class="grid mt-6 gap-6">
             <div>
-              <span class="font-bold uppercase text-sm w-24 inline-block mb-1"
-                >Name</span
-              >
-              Iván Torres García
+              <p class="font-bold uppercase text-sm mb-1">Name</p>
+              <p>Iván Torres García</p>
             </div>
             <div>
-              <span class="font-bold uppercase text-sm w-24 inline-block mb-1"
-                >Old</span
-              >
-              19
+              <p class="font-bold uppercase text-sm mb-1">Old</p>
+              <p>19</p>
             </div>
             <div>
-              <span class="font-bold uppercase text-sm w-24 inline-block mb-1"
-                >Email</span
-              >
-              ivantorresgarcia.02@gmail.com
+              <p class="font-bold uppercase text-sm mb-1">Email</p>
+              <p>ivantorresgarcia.02@gmail.com</p>
             </div>
             <div>
-              <span class="font-bold uppercase text-sm w-24 inline-block mb-1"
-                >Address</span
-              >
-              Valencia, Spain
+              <p class="font-bold uppercase text-sm mb-1">Address</p>
+              <p>Valencia, Spain</p>
             </div>
           </div>
         </div>
@@ -48,7 +40,9 @@
           href="#"
           class="
             inline-block
-            mt-6
+            mx-auto
+            sm:mx-0
+            mt-10
             px-14
             py-3
             bg-gray-800
