@@ -1,5 +1,5 @@
 <template>
-  <section class="p-10 flex justify-center" style="background-color: #f7f7f7">
+  <section class="p-10 flex justify-center bg-gray-200">
     <div class="flex gap-5 justify-around w-3/4 text-6xl text-gray-500">
       <div>
         <a

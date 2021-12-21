@@ -29,7 +29,44 @@
     <main>
       <router-view />
     </main>
-    <footer class="w-full bg-red-400">Hey</footer>
+    <footer
+      class="
+        flex flex-col
+        md:flex-row md:justify-between
+        w-full
+        bg-black
+        text-white
+        mt-10
+        p-6
+      "
+    >
+      <p class="text-sm py-2">
+        Iván Torres García - ivantorresgarcia.02@gmail.com
+      </p>
+      <div class="flex gap-4 text-3xl">
+        <a
+          target="_blank"
+          href="https://www.linkedin.com/in/ivan-torres-garcia/"
+          class="hover:text-gray-300 ease-in duration-100"
+          rel="noreferrer"
+          ><font-awesome-icon :icon="['fab', 'linkedin']"
+        /></a>
+        <a
+          target="_blank"
+          href="https://www.linkedin.com/in/ivan-torres-garcia/"
+          class="hover:text-gray-300 ease-in duration-100"
+          rel="noreferrer"
+          ><font-awesome-icon :icon="['fab', 'github']"
+        /></a>
+        <a
+          target="_blank"
+          href="https://www.linkedin.com/in/ivan-torres-garcia/"
+          class="hover:text-gray-300 ease-in duration-100"
+          rel="noreferrer"
+          ><font-awesome-icon :icon="['fab', 'dev']"
+        /></a>
+      </div>
+    </footer>
   </div>
 </template>
 
@@ -45,7 +82,7 @@ a.router-link-exact-active {
 }
 .l-page {
   display: grid;
-  height: 100%;
+  height: 100vh;
   grid-template-rows: auto 1fr auto;
 }
 </style>

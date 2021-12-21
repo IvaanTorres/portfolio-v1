@@ -1,5 +1,5 @@
 <template>
-  <section id="about" class="md:w-3/4 md:m-auto">
+  <section tabindex="-1" id="about" class="md:w-3/4 md:m-auto">
     <div class="grid grid-cols-1 lg:grid-cols-2 mt-10 gap-14">
       <img
         src="../../../assets/img/profile.jpg"
