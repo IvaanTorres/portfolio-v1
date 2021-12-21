@@ -32011,13 +32011,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "render": () => (/* binding */ render)
 /* harmony export */ });
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
+/* harmony import */ var _assets_img_skills_html_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../assets/img/skills/html.png */ "./resources/assets/img/skills/html.png");
+/* harmony import */ var _assets_img_skills_css_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../assets/img/skills/css.png */ "./resources/assets/img/skills/css.png");
+/* harmony import */ var _assets_img_skills_js_jpg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../assets/img/skills/js.jpg */ "./resources/assets/img/skills/js.jpg");
+
+
+
+
+
+var _hoisted_1 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<section class=\"pt-20 md:w-3/4 m-auto\"><h2 class=\"text-4xl font-bold text-center mb-14\">Skills</h2><h3 class=\"text-2xl font-bold\">Programming Languages</h3><div><img src=\"" + _assets_img_skills_html_png__WEBPACK_IMPORTED_MODULE_1__["default"] + "\" class=\"w-16\" alt=\"#\"><img src=\"" + _assets_img_skills_css_png__WEBPACK_IMPORTED_MODULE_2__["default"] + "\" class=\"w-16\" alt=\"#\"><img src=\"" + _assets_img_skills_js_jpg__WEBPACK_IMPORTED_MODULE_3__["default"] + "\" class=\"w-16\" alt=\"#\"></div></section>", 1);
 
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)($setup["MyHeader"], {
     "class": "h-screen"
   }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)($setup["MySocial"], {
     "class": "hidden sm:flex"
-  }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)($setup["MyAboutMe"]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Hacer Skills section ")], 64
+  }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)($setup["MyAboutMe"]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Hacer Skills section "), _hoisted_1], 64
   /* STABLE_FRAGMENT */
   );
 }
@@ -32359,7 +32368,7 @@ var _hoisted_1 = {
   "class": "md:w-3/4 md:m-auto m-5"
 };
 
-var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-14 sm:mt-10\"><img src=\"" + _assets_img_profile_webp__WEBPACK_IMPORTED_MODULE_1__["default"] + "\" alt=\"Profile photo\" width=\"100%\" height=\"auto\"><div class=\"flex items-start justify-between flex-col text-sm\"><div><span class=\"font-extrabold\">Discover</span><h2 class=\"font-extrabold text-2xl mb-4\">About me</h2><p class=\"font-light mb-6\"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio illum cum voluptate iusto voluptatem quas quis harum suscipit, eaque doloribus? </p><hr><div class=\"grid mt-6 gap-6\"><div><p class=\"font-bold uppercase text-sm mb-1\">Name</p><p>Iván Torres García</p></div><div><p class=\"font-bold uppercase text-sm mb-1\">Old</p><p>19</p></div><div><p class=\"font-bold uppercase text-sm mb-1\">Email</p><p>ivantorresgarcia.02@gmail.com</p></div><div><p class=\"font-bold uppercase text-sm mb-1\">Address</p><p>Valencia, Spain</p></div></div></div><a href=\"#\" class=\"inline-block mx-auto sm:mx-0 mt-10 px-14 py-3 bg-gray-800 hover:bg-gray-900 text-white font-bold ease-in duration-75 rounded-full\">Download CV</a></div></div>", 1);
+var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-14 sm:mt-10\"><img src=\"" + _assets_img_profile_webp__WEBPACK_IMPORTED_MODULE_1__["default"] + "\" alt=\"Profile photo\" width=\"100%\" height=\"100%\"><div class=\"flex items-start justify-between flex-col text-sm\"><div><span class=\"font-extrabold\">Discover</span><h2 class=\"font-extrabold text-2xl mb-4\">About me</h2><p class=\"font-light mb-6\"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio illum cum voluptate iusto voluptatem quas quis harum suscipit, eaque doloribus? </p><hr><div class=\"grid mt-6 gap-6\"><div><p class=\"font-bold uppercase text-sm mb-1\">Name</p><p>Iván Torres García</p></div><div><p class=\"font-bold uppercase text-sm mb-1\">Old</p><p>19</p></div><div><p class=\"font-bold uppercase text-sm mb-1\">Email</p><p>ivantorresgarcia.02@gmail.com</p></div><div><p class=\"font-bold uppercase text-sm mb-1\">Address</p><p>Valencia, Spain</p></div></div></div><a href=\"#\" class=\"inline-block mx-auto sm:mx-0 mt-10 px-14 py-3 bg-gray-800 hover:bg-gray-900 text-white font-bold ease-in duration-75 rounded-full\">Download CV</a></div></div>", 1);
 
 var _hoisted_3 = [_hoisted_2];
 function render(_ctx, _cache) {
@@ -32503,7 +32512,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.subtitle[data-v-863e141e] {\n  overflow: hidden; /* Ensures the content is not revealed until the animation */\n  border-right: 0.15em solid rgb(253, 224, 71); /* The typwriter cursor */\n  white-space: nowrap; /* Keeps the content on a single line */\n  letter-spacing: 0.15em; /* Adjust as needed */\n  -webkit-animation: typing-863e141e 3.5s steps(40, end),blink-caret-863e141e 0.75s step-end infinite;\n          animation: typing-863e141e 3.5s steps(40, end),blink-caret-863e141e 0.75s step-end infinite;\n}\n\n/* The typing effect */\n@-webkit-keyframes typing-863e141e {\nfrom {\n    width: 0;\n}\nto {\n    width: 100%;\n}\n}\n@keyframes typing-863e141e {\nfrom {\n    width: 0;\n}\nto {\n    width: 100%;\n}\n}\n\n/* The typewriter cursor effect */\n@-webkit-keyframes blink-caret-863e141e {\nfrom,\n  to {\n    border-color: transparent;\n}\n50% {\n    border-color: rgb(253, 224, 71);\n}\n}\n@keyframes blink-caret-863e141e {\nfrom,\n  to {\n    border-color: transparent;\n}\n50% {\n    border-color: rgb(253, 224, 71);\n}\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.subtitle[data-v-863e141e] {\r\n  overflow: hidden; /* Ensures the content is not revealed until the animation */\r\n  border-right: 0.15em solid rgb(253, 224, 71); /* The typwriter cursor */\r\n  white-space: nowrap; /* Keeps the content on a single line */\r\n  letter-spacing: 0.15em; /* Adjust as needed */\r\n  -webkit-animation: typing-863e141e 3.5s steps(40, end),blink-caret-863e141e 0.75s step-end infinite;\r\n          animation: typing-863e141e 3.5s steps(40, end),blink-caret-863e141e 0.75s step-end infinite;\n}\r\n\r\n/* The typing effect */\n@-webkit-keyframes typing-863e141e {\nfrom {\r\n    width: 0;\n}\nto {\r\n    width: 100%;\n}\n}\n@keyframes typing-863e141e {\nfrom {\r\n    width: 0;\n}\nto {\r\n    width: 100%;\n}\n}\r\n\r\n/* The typewriter cursor effect */\n@-webkit-keyframes blink-caret-863e141e {\nfrom,\r\n  to {\r\n    border-color: transparent;\n}\n50% {\r\n    border-color: rgb(253, 224, 71);\n}\n}\n@keyframes blink-caret-863e141e {\nfrom,\r\n  to {\r\n    border-color: transparent;\n}\n50% {\r\n    border-color: rgb(253, 224, 71);\n}\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -32622,6 +32631,51 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/profile.webp?38ec0ae1b76b5ee2e91be64684cc3dd5");
+
+/***/ }),
+
+/***/ "./resources/assets/img/skills/css.png":
+/*!*********************************************!*\
+  !*** ./resources/assets/img/skills/css.png ***!
+  \*********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/css.png?3a754f7dd62916af5ba86c9c26be8ba2");
+
+/***/ }),
+
+/***/ "./resources/assets/img/skills/html.png":
+/*!**********************************************!*\
+  !*** ./resources/assets/img/skills/html.png ***!
+  \**********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/html.png?9b8d1513cbb6cbbd09a3b08bc5281d1e");
+
+/***/ }),
+
+/***/ "./resources/assets/img/skills/js.jpg":
+/*!********************************************!*\
+  !*** ./resources/assets/img/skills/js.jpg ***!
+  \********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/js.jpg?e2b0e5a5773fd250fe9206a082f60b6d");
 
 /***/ }),
 

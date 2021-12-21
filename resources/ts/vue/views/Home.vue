@@ -2,7 +2,7 @@
   <MyHeader class="h-screen" />
   <MySocial class="hidden sm:flex" />
   <MyAboutMe />
-  <!-- Hacer Skills section -->
+  <MySkills />
 </template>
 
 <script lang="ts" setup>
@@ -10,4 +10,5 @@
 import MyHeader from "../components/MyHeader.vue";
 import MySocial from "../components/MySocial.vue";
 import MyAboutMe from "../components/MyAboutMe.vue";
+import MySkills from "../components/MySkills.vue";
 </script>

@@ -13,6 +13,7 @@
 
         <!-- CSS -->
         <link rel="icon" href="{{ mix('favicon.ico') }}" type="image/x-icon">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css">
         <link href="{{ mix('css/app.css') }}" rel="stylesheet">
 
     </head>
