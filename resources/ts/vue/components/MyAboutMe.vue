@@ -2,10 +2,10 @@
   <section id="about" class="md:w-3/4 md:m-auto m-5">
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-14 sm:mt-10">
       <img
-        src="../../../assets/img/profile.jpg"
+        src="../../../assets/img/profile.webp"
         alt="Profile photo"
         width="100%"
-        height="auto"
+        height="100%"
       />
       <div class="flex items-start justify-between flex-col text-sm">
         <div>
