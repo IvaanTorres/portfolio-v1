@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <div
+  <div class="l-page">
+    <nav
       class="
         flex
         justify-between
@@ -19,14 +19,17 @@
       >
       <div class="flex gap-5 justify-center sm:justify-start w-full sm:w-auto">
         <router-link class="font-bold text-white py-4" to="/">Home</router-link>
-        <a href="#" class="font-bold text-white py-4">Projects</a>
-        <a href="#" class="font-bold text-white py-4">Skills</a>
         <router-link class="font-bold text-white py-4" to="/about"
-          >About</router-link
+          >Projects</router-link
         >
+        <a href="#" class="font-bold text-white py-4">Skills</a>
+        <a href="#about" class="font-bold text-white py-4">About</a>
       </div>
-    </div>
-    <router-view />
+    </nav>
+    <main>
+      <router-view />
+    </main>
+    <footer class="w-full bg-red-400">Hey</footer>
   </div>
 </template>
 
@@ -38,5 +41,11 @@ a.router-link-exact-active {
 }
 * {
   font-family: "Sora";
+  scroll-behavior: smooth;
+}
+.l-page {
+  display: grid;
+  height: 100%;
+  grid-template-rows: auto 1fr auto;
 }
 </style>
