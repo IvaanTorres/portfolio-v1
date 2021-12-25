@@ -22,7 +22,7 @@
         <router-link class="font-bold text-white py-4" to="/about"
           >Projects</router-link
         >
-        <a href="#" class="font-bold text-white py-4">Skills</a>
+        <a href="#skills" class="font-bold text-white py-4">Skills</a>
         <a href="#about" class="font-bold text-white py-4">About</a>
       </div>
     </nav>
@@ -36,7 +36,6 @@
         w-full
         bg-black
         text-white
-        mt-10
         p-6
       "
     >

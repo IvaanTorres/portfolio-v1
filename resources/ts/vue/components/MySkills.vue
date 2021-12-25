@@ -1,5 +1,5 @@
 <template>
-  <section class="skills mt-10 p-5 pb-10">
+  <section id="skills" class="skills mt-10 py-5 pb-10">
     <h2 class="text-center font-bold text-3xl text-white mb-14">Skills</h2>
     <div
       class="
