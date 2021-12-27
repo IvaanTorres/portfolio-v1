@@ -72,8 +72,7 @@ const navVariants = () => {
   if (router.fullPath === "/") {
     return "flex justify-between bg-transparent p-4 px-24 absolute top-0 w-full z-50";
   }
-  console.log(checkRoute());
-  return "flex justify-between bg-black p-4 px-24 absolute top-0 w-full z-50";
+  return "flex justify-between bg-black p-4 px-24 block w-full z-50";
 };
 </script>
 
@@ -88,8 +87,8 @@ a.router-link-exact-active {
   scroll-behavior: smooth;
 }
 .l-page {
-  /*  display: grid;
+  display: grid;
   height: 100vh;
-  grid-template-rows: auto 1fr auto; */
+  grid-template-rows: auto 1fr auto;
 }
 </style>

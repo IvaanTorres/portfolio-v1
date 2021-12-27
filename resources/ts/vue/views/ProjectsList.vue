@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full pt-32">
+  <div class="w-full pt-10">
     <h1 class="text-center font-extrabold text-3xl">Web Development</h1>
     <div class="main-projects p-5 mx-5 md:mx-20 md:p-12 mt-10">
       <div class="grid grid-cols-1 lg:grid-cols-3 grid-rows-2 bg-white">
@@ -37,7 +37,7 @@
               >SASS</span
             >
           </div>
-          <a
+          <router-link
             class="
               inline
               mt-8
@@ -51,8 +51,8 @@
               lg:mb-3
               rounded-full
             "
-            href="#"
-            >Open</a
+            to="/projects/1"
+            >Open</router-link
           >
           <img
             src="../../../assets/img/attach.svg"
