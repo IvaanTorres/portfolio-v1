@@ -1,30 +1,37 @@
-import {
-  createRouter,
-  createWebHistory,
-  createWebHashHistory,
-  RouteRecordRaw,
-} from "vue-router";
+import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
 
 import Home from "./vue/views/Home.vue";
-import About from "./vue/views/About.vue";
+import ProjectsList from "./vue/views/ProjectsList.vue";
+import ProjectDetails from "./vue/views/ProjectDetails.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
     path: "/",
-    name: "Home page",
+    name: "Home Page",
     component: Home,
   },
   {
-    path: "/about",
-    name: "About page",
-    component: About,
+    path: "/projects",
+    name: "Projects List",
+    component: ProjectsList,
+  },
+  {
+    path: "/projects/:id",
+    name: "Projects Details",
+    component: ProjectDetails,
   },
 ];
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
-  //history: createWebHashHistory(),
   routes,
+  /* scrollBehavior(to, from, savedPosition) {
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        resolve({ left: 0, top: 0 });
+      }, 0);
+    });
+  }, */
 });
 
 export default router;

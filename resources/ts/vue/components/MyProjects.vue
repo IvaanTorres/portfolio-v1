@@ -8,7 +8,7 @@
         deserunt quisquam fugit! Possimus ad ratione quas eos quos, obcaecati
         harum quo!
       </p>
-      <a
+      <router-link
         class="
           inline-block
           mt-6
@@ -23,8 +23,8 @@
           text-white
           font-bold
         "
-        href="#"
-        >Open</a
+        to="/projects"
+        >Open</router-link
       >
     </div>
     <div
@@ -37,12 +37,11 @@
         deserunt quisquam fugit! Possimus ad ratione quas eos quos, obcaecati
         harum quo!
       </p>
-      <a
+      <router-link
         class="
           inline-block
           mt-6
           bg-black
-          text-white
           shadow-lg shadow-gray-900
           hover:shadow-xl hover:shadow-gray-900
           px-10
@@ -50,10 +49,11 @@
           rounded-full
           ease-in
           duration-150
+          text-white
           font-bold
         "
-        href="#"
-        >Open</a
+        to="/projects"
+        >Open</router-link
       >
       <img
         src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg"

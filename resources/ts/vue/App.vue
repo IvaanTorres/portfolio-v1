@@ -1,18 +1,6 @@
 <template>
   <div class="l-page">
-    <nav
-      class="
-        flex
-        justify-between
-        bg-transparent
-        p-4
-        px-24
-        absolute
-        top-0
-        w-full
-        z-50
-      "
-    >
+    <nav :class="navVariants()">
       <span
         class="hidden sm:block font-extrabold text-xl text-white py-4 font-mono"
         >&#60;ITG /&#62;</span
@@ -20,8 +8,13 @@
       <div class="flex gap-5 justify-center sm:justify-start w-full sm:w-auto">
         <router-link class="font-bold text-white py-4" to="/">Home</router-link>
         <a href="#projects" class="font-bold text-white py-4">Projects</a>
-        <a href="#skills" class="font-bold text-white py-4">Skills</a>
-        <a href="#about" class="font-bold text-white py-4">About</a>
+        <!-- HACER DESPLEGABLE CON ROUTER-LINKS -->
+        <a v-if="checkRoute()" href="#skills" class="font-bold text-white py-4"
+          >Skills</a
+        >
+        <a v-if="checkRoute()" href="#about" class="font-bold text-white py-4"
+          >About</a
+        >
       </div>
     </nav>
     <main>
@@ -67,6 +60,23 @@
   </div>
 </template>
 
+<script lang="ts" setup>
+import { useRoute } from "vue-router";
+const router = useRoute();
+
+const checkRoute = () => {
+  const paths = ["/", "#projects", "#skills", "#about"];
+  return paths.includes(router.path);
+};
+const navVariants = () => {
+  if (router.fullPath === "/") {
+    return "flex justify-between bg-transparent p-4 px-24 absolute top-0 w-full z-50";
+  }
+  console.log(checkRoute());
+  return "flex justify-between bg-black p-4 px-24 absolute top-0 w-full z-50";
+};
+</script>
+
 <style>
 @import url("https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700;800&display=swap");
 
@@ -78,8 +88,8 @@ a.router-link-exact-active {
   scroll-behavior: smooth;
 }
 .l-page {
-  display: grid;
+  /*  display: grid;
   height: 100vh;
-  grid-template-rows: auto 1fr auto;
+  grid-template-rows: auto 1fr auto; */
 }
 </style>
