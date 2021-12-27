@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 25.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 141 141" style="enable-background:new 0 0 141 141;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#4D4D4D;}
+	.st1{fill:#CCCCCC;}
+	.st2{fill:none;stroke:#000000;stroke-width:4;stroke-miterlimit:10;}
+</style>
+<g>
+	<circle class="st0" cx="70.5" cy="70.5" r="66.5"/>
+	<path d="M70.5,8C104.96,8,133,36.04,133,70.5S104.96,133,70.5,133S8,104.96,8,70.5S36.04,8,70.5,8 M70.5,0C31.56,0,0,31.56,0,70.5
+		S31.56,141,70.5,141S141,109.44,141,70.5S109.44,0,70.5,0L70.5,0z"/>
+</g>
+<g>
+	<circle class="st1" cx="70.5" cy="70.5" r="43.5"/>
+	<path d="M70.5,29C93.38,29,112,47.62,112,70.5S93.38,112,70.5,112S29,93.38,29,70.5S47.62,29,70.5,29 M70.5,25
+		C45.37,25,25,45.37,25,70.5S45.37,116,70.5,116S116,95.63,116,70.5S95.63,25,70.5,25L70.5,25z"/>
+</g>
+<g>
+	<line class="st2" x1="27" y1="56" x2="70" y2="56"/>
+</g>
+<line class="st2" x1="70" y1="56" x2="70" y2="82"/>
+<line class="st2" x1="70" y1="82" x2="115" y2="82"/>
+</svg>

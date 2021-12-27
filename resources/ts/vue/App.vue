@@ -19,9 +19,7 @@
       >
       <div class="flex gap-5 justify-center sm:justify-start w-full sm:w-auto">
         <router-link class="font-bold text-white py-4" to="/">Home</router-link>
-        <router-link class="font-bold text-white py-4" to="/about"
-          >Projects</router-link
-        >
+        <a href="#projects" class="font-bold text-white py-4">Projects</a>
         <a href="#skills" class="font-bold text-white py-4">Skills</a>
         <a href="#about" class="font-bold text-white py-4">About</a>
       </div>

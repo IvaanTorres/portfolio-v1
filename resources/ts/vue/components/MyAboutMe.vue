@@ -1,6 +1,6 @@
 <template>
   <section id="about" class="md:w-3/4 md:m-auto m-5">
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-14 sm:mt-10">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-14 sm:pt-10">
       <img
         src="../../../assets/img/profile.webp"
         alt="Profile photo"
