@@ -1,21 +1,61 @@
 <template>
   <div class="l-page">
     <nav :class="navVariants()">
-      <span
-        class="hidden sm:block font-extrabold text-xl text-white py-4 font-mono"
-        >&#60;ITG /&#62;</span
+      <router-link to="/"
+        ><span class="block font-extrabold text-xl text-white py-4 font-mono"
+          >&#60;ITG /&#62;</span
+        ></router-link
       >
-      <div class="flex gap-5 justify-center sm:justify-start w-full sm:w-auto">
-        <router-link class="font-bold text-white py-4" to="/">Home</router-link>
-        <a href="#projects" class="font-bold text-white py-4">Projects</a>
+      <div :class="navResponsive()">
+        <font-awesome-icon
+          :icon="['fas', 'times']"
+          class="
+            absolute
+            top-0
+            right-0
+            m-10
+            mt-6
+            lg:hidden
+            text-white
+            my-3
+            text-4xl
+            cursor-pointer
+          "
+          @click="toggleHamburguer()"
+        />
+        <router-link
+          class="font-bold text-white py-4"
+          to="/"
+          @click="toggleHamburguer()"
+          >Home</router-link
+        >
+        <a
+          href="#projects"
+          class="font-bold text-white py-4"
+          @click="toggleHamburguer()"
+          >Projects</a
+        >
         <!-- HACER DESPLEGABLE CON ROUTER-LINKS -->
-        <a v-if="checkRoute()" href="#skills" class="font-bold text-white py-4"
+        <a
+          v-if="checkRoute()"
+          href="#skills"
+          class="font-bold text-white py-4"
+          @click="toggleHamburguer()"
           >Skills</a
         >
-        <a v-if="checkRoute()" href="#about" class="font-bold text-white py-4"
+        <a
+          v-if="checkRoute()"
+          href="#about"
+          class="font-bold text-white py-4"
+          @click="toggleHamburguer()"
           >About</a
         >
       </div>
+      <font-awesome-icon
+        :icon="['fas', 'bars']"
+        class="block lg:hidden text-white my-3 text-4xl cursor-pointer"
+        @click="toggleHamburguer()"
+      />
     </nav>
     <main>
       <router-view />
@@ -61,6 +101,7 @@
 </template>
 
 <script lang="ts" setup>
+import { ref } from "vue";
 import { useRoute } from "vue-router";
 const router = useRoute();
 
@@ -69,10 +110,29 @@ const checkRoute = () => {
   return paths.includes(router.path);
 };
 const navVariants = () => {
-  if (router.fullPath === "/") {
-    return "flex justify-between bg-transparent p-4 px-24 absolute top-0 w-full z-50";
+  if (checkRoute()) {
+    return "flex justify-between bg-transparent p-4 px-10 sm:px-24 absolute top-0 w-full z-50";
+  } else {
+    return "flex justify-between bg-black p-4 px-10 sm:px-24 block w-full z-50";
   }
-  return "flex justify-between bg-black p-4 px-24 block w-full z-50";
+};
+
+const isActive = ref(false);
+const navResponsive = () => {
+  if (isActive.value === false) {
+    return "hidden lg:flex lg:gap-5 lg:justify-center sm:justify-start w-full sm:w-auto";
+  }
+  return "fixed top-0 left-0 w-full h-screen bg-gray-900 flex flex-col text-center gap-4 justify-center text-2xl";
+};
+const toggleHamburguer = () => {
+  //Check the window is lg (1024px)
+  if (window.innerWidth < 1024) {
+    if (isActive.value === false) {
+      isActive.value = true;
+    } else {
+      isActive.value = false;
+    }
+  }
 };
 </script>
 

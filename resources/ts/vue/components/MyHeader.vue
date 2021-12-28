@@ -14,8 +14,17 @@
         z-30
       "
     >
-      <div class="text-center sm:text-left sm:ml-24 text-white">
-        <p class="mb-4">Welcome</p>
+      <div
+        class="
+          text-center
+          sm:text-left sm:mt-14
+          md:mt-10
+          sm:ml-16
+          md:ml-24
+          text-white
+        "
+      >
+        <p class="sm:hidden md:inline-block mb-4">Welcome</p>
         <h1 class="text-3xl sm:text-5xl md:text-6xl mb-5 font-extrabold">
           Iván Torres García
         </h1>
