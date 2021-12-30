@@ -18,7 +18,7 @@
         :name="skill.name"
       />
     </div>
-    <a
+    <router-link
       class="
         inline
         mt-8
@@ -32,29 +32,19 @@
         lg:mb-3
         rounded-full
       "
-      href="#"
-      >Open</a
+      :to="getProjectUrl(data.id)"
+      >Open</router-link
     >
     <img
-      v-if="!isMultipleOf3()"
       src="../../../../assets/img/attach.svg"
-      alt="hey"
-      class="
-        w-16
-        absolute
-        bottom-0
-        left-1/2
-        -ml-8
-        translate-y-8
-        rotate-90
-        lg:bottom-1/2 lg:left-full lg:-mt-8 lg:rotate-180
-      "
+      alt="lock"
+      :class="setClass()"
     />
   </div>
 </template>
 
 <script lang="ts" setup>
-import { PropType } from "vue";
+import { PropType, ref, onMounted, computed } from "vue";
 //! INTERFACES
 import Project from "../../../interfaces/Project";
 //! COMPONENTS
@@ -71,8 +61,40 @@ const props = defineProps({
   },
 });
 
-const isMultipleOf3 = () => {
-  const index = props.index + 1;
-  return index % 3 === 0;
+const getProjectUrl = (id: number) => {
+  return "/projects/" + id;
 };
+
+//! ERROR: THE LOCK ISSN'T UPDATING AUTO ITS DISPLAY WHEN CHANGING THE WINDOW WIDTH
+const setClass = () => {
+  //console.log(isLg.value);
+  if (isLg.value) {
+    if (isMultipleOf3()) {
+      return "hidden w-16 absolute bottom-0 left-1/2 -ml-8 translate-y-8 rotate-90 lg:bottom-1/2 lg:left-full lg:-mt-8 lg:rotate-180";
+    } else {
+      return "w-16 absolute bottom-0 left-1/2 -ml-8 translate-y-8 rotate-90 lg:bottom-1/2 lg:left-full lg:-mt-8 lg:rotate-180";
+    }
+  } else {
+    if (props.index === 5) {
+      return "hidden w-16 absolute bottom-0 left-1/2 -ml-8 translate-y-8 rotate-90 lg:bottom-1/2 lg:left-full lg:-mt-8 lg:rotate-180";
+    }
+    return "w-16 absolute bottom-0 left-1/2 -ml-8 translate-y-8 rotate-90 lg:bottom-1/2 lg:left-full lg:-mt-8 lg:rotate-180";
+  }
+};
+
+const isMultipleOf3 = () => {
+  return (props.index + 1) % 3 === 0;
+};
+
+const windowWidth = ref(window.innerWidth);
+let isLg = ref(windowWidth.value >= 1024);
+
+onMounted(() => {
+  window.onresize = () => {
+    windowWidth.value = window.innerWidth;
+    //console.log(windowWidth.value);
+    setClass();
+    isLg.value = windowWidth.value >= 1024;
+  };
+});
 </script>

@@ -33,13 +33,14 @@
         </div>
       </div>
       <div class="col-span-3 md:col-span-2">
-        <h1 class="text-3xl mb-5 font-extrabold">{{ title }}</h1>
+        <h1 class="text-3xl mb-5 font-extrabold">Title</h1>
         <p class="mb-5">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis at,
           repellendus ullam iure harum ut placeat et quidem! Laborum, corrupti.
         </p>
         <p class="font-semibold mb-5">Created at: 30/01/2022</p>
         <div class="flex flex-wrap gap-2">
+          <!-- <SkillTag /> -->
           <span class="px-3 py-1 text-xs font-semibold bg-blue-400 rounded-full"
             >VueJS</span
           >
@@ -72,5 +73,11 @@ import { ref } from "vue";
 import { useRoute } from "vue-router";
 const router = useRoute();
 
-const title = ref("Title");
+//! INTERFACES
+import Project from "../../interfaces/Project";
+
+//! COMPONENTS
+import SkillTag from "../components/partials/SkillTag.vue";
+
+//const project: Project = {}; //* API call to get the specific project and all its data.
 </script>
