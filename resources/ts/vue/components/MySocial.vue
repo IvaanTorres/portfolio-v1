@@ -1,42 +1,49 @@
 <template>
   <section class="p-10 flex justify-center bg-gray-200">
-    <div class="flex gap-5 justify-around w-3/4 text-6xl text-gray-500">
-      <div>
-        <a
-          target="_blank"
-          href="https://www.linkedin.com/in/ivan-torres-garcia/"
-          class="hover:text-gray-700 ease-in duration-100"
-          rel="noreferrer"
-          ><font-awesome-icon :icon="['fab', 'linkedin']"
-        /></a>
-      </div>
-      <div>
-        <a
-          target="_blank"
-          href="https://github.com/IvaanTorres"
-          class="hover:text-gray-700 ease-in duration-100"
-          rel="noreferrer"
-          ><font-awesome-icon :icon="['fab', 'github']"
-        /></a>
-      </div>
-      <div>
-        <a
-          target="_blank"
-          href="https://dev.to/ivaantorres"
-          class="hover:text-gray-700 ease-in duration-100"
-          rel="noreferrer"
-          ><font-awesome-icon :icon="['fab', 'dev']"
-        /></a>
-      </div>
-      <div>
-        <a
-          target="_blank"
-          href="mailto:ivantorresgarcia.02@gmail.com"
-          class="hover:text-gray-700 ease-in duration-100"
-          rel="noreferrer"
-          ><font-awesome-icon :icon="['fas', 'envelope']"
-        /></a>
-      </div>
+    <div
+      v-for="social of socialGroup"
+      :key="social.id"
+      class="flex gap-5 justify-around w-3/4 text-6xl text-gray-500"
+    >
+      <SocialComp :data="social" />
     </div>
   </section>
 </template>
+
+<script lang="ts" setup>
+//! INTERFACES
+import Social from "../../interfaces/Social";
+//! COMPONENTS
+import SocialComp from "./partials/Social.vue";
+
+const socialGroup: Social[] = [
+  {
+    id: 1,
+    name: "Linkedin",
+    link: "https://www.linkedin.com/in/ivan-torres-garcia/",
+    user: "Iván Torres García",
+    src_img: "fab@linkedin",
+  },
+  {
+    id: 2,
+    name: "GitHub",
+    link: "https://github.com/IvaanTorres",
+    user: "IvaanTorres",
+    src_img: "fab@github",
+  },
+  {
+    id: 3,
+    name: "Dev.to",
+    link: "https://dev.to/ivaantorres",
+    user: "ivaantorres",
+    src_img: "fab@dev",
+  },
+  {
+    id: 4,
+    name: "Email",
+    link: "mailto:ivantorresgarcia.02@gmail.com",
+    user: "ivantorresgarcia.02@gmail.com",
+    src_img: "fas@envelope",
+  },
+];
+</script>
