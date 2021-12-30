@@ -14,176 +14,150 @@
         m-auto
       "
     >
-      <div class="bg-white border-2 border-black p-5">
-        <h3
-          class="
-            text-2xl
-            font-bold
-            text-center
-            mb-5
-            pb-2
-            border-b-2 border-black
-          "
-        >
-          Languages
-        </h3>
-        <div class="grid grid-cols-4 gap-4 m-auto p-3">
-          <img
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original-wordmark.svg"
-            class="w-10 m-auto"
-            title="HTML"
-          />
-          <img
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original-wordmark.svg"
-            class="w-10 m-auto"
-            title="CSS"
-          />
-          <img
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
-            class="w-10 m-auto"
-            title="JavaScript"
-          />
-          <img
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
-            class="w-10 m-auto"
-            title="TypeScript"
-          />
-          <img
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg"
-            class="w-10 m-auto"
-            title="SASS/SCSS"
-          />
-          <img
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg"
-            class="w-10 m-auto"
-            title="PHP"
-          />
-          <img
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"
-            class="w-10 m-auto"
-            title="Java"
-          />
-          <img
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg"
-            class="w-10 m-auto"
-            title="Bash/Shell Script"
-          />
-        </div>
-      </div>
-
-      <div class="bg-white border-2 border-black p-5">
-        <h3
-          class="
-            text-2xl
-            font-bold
-            text-center
-            mb-5
-            pb-2
-            border-b-2 border-black
-          "
-        >
-          Frameworks
-        </h3>
-        <div class="grid grid-cols-4 gap-4 m-auto p-3">
-          <img
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg"
-            class="w-10 m-auto"
-            title="Angular"
-          />
-          <img
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg"
-            class="w-10 m-auto"
-            title="VueJS"
-          />
-          <img
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jquery/jquery-original-wordmark.svg"
-            class="w-10 m-auto"
-            title="JQuery"
-          />
-          <img
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg"
-            class="w-10 m-auto"
-            title="ExpressJS"
-          />
-          <img
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-plain.svg"
-            class="w-10 m-auto"
-            title="Laravel"
-          />
-          <img
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg"
-            class="w-10 m-auto"
-            title="TailwindCSS"
-          />
-        </div>
-      </div>
-
-      <div class="bg-white border-2 border-black p-5">
-        <h3
-          class="
-            text-2xl
-            font-bold
-            text-center
-            mb-5
-            pb-2
-            border-b-2 border-black
-          "
-        >
-          Databases
-        </h3>
-        <div class="grid grid-cols-4 gap-4 m-auto p-3">
-          <img
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg"
-            class="w-10 m-auto"
-            title="MySQL"
-          />
-          <img
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
-            class="w-10 m-auto"
-            title="MongoDB"
-          />
-        </div>
-      </div>
-
-      <div class="bg-white border-2 border-black p-5">
-        <h3
-          class="
-            text-2xl
-            font-bold
-            text-center
-            mb-5
-            pb-2
-            border-b-2 border-black
-          "
-        >
-          Dev Tools
-        </h3>
-        <div class="grid grid-cols-4 gap-4 m-auto p-3">
-          <img
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
-            class="w-10 m-auto"
-            title="Git"
-          />
-          <img
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
-            class="w-10 m-auto"
-            title="GitHub"
-          />
-          <img
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"
-            class="w-10 m-auto"
-            title="Docker"
-          />
-          <img
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jenkins/jenkins-original.svg"
-            class="w-10 m-auto"
-            title="Jenkins"
-          />
-        </div>
-      </div>
+      <SkillsBlock
+        v-for="t of types"
+        :key="t.id"
+        :title="t.type"
+        :data="getSkills(t.type)"
+      />
     </div>
   </section>
 </template>
+
+<script lang="ts" setup>
+//! INTERFACES
+import Skill from "../../interfaces/Skill";
+//! COMPONENTS
+import SkillsBlock from "./partials/SkillsBlock.vue";
+
+const skills: Skill[] = [
+  {
+    id: 0,
+    name: "HTML",
+    type: "Languages",
+    src_img: "html5/html5-original-wordmark.svg",
+  },
+  {
+    id: 1,
+    name: "CSS",
+    type: "Languages",
+    src_img: "css3/css3-original-wordmark.svg",
+  },
+  {
+    id: 2,
+    name: "JavaScript",
+    type: "Languages",
+    src_img: "javascript/javascript-original.svg",
+  },
+  {
+    id: 3,
+    name: "TypeScript",
+    type: "Languages",
+    src_img: "typescript/typescript-original.svg",
+  },
+  {
+    id: 4,
+    name: "SASS",
+    type: "Languages",
+    src_img: "sass/sass-original.svg",
+  },
+  {
+    id: 5,
+    name: "PHP",
+    type: "Languages",
+    src_img: "php/php-original.svg",
+  },
+  {
+    id: 6,
+    name: "Java",
+    type: "Databases",
+    src_img: "java/java-original.svg",
+  },
+  {
+    id: 7,
+    name: "MySQL",
+    type: "Databases",
+    src_img: "mysql/mysql-original.svg",
+  },
+  {
+    id: 8,
+    name: "MongoDB",
+    type: "Databases",
+    src_img: "mongodb/mongodb-original.svg",
+  },
+  {
+    id: 9,
+    name: "Angular",
+    type: "Frameworks",
+    src_img: "angularjs/angularjs-original.svg",
+  },
+  {
+    id: 10,
+    name: "VueJS",
+    type: "Frameworks",
+    src_img: "vuejs/vuejs-original.svg",
+  },
+  {
+    id: 11,
+    name: "Laravel",
+    type: "Frameworks",
+    src_img: "laravel/laravel-plain.svg",
+  },
+  {
+    id: 12,
+    name: "ExpressJS",
+    type: "Frameworks",
+    src_img: "express/express-original.svg",
+  },
+  {
+    id: 13,
+    name: "JQuery",
+    type: "Frameworks",
+    src_img: "jquery/jquery-original-wordmark.svg",
+  },
+  {
+    id: 14,
+    name: "TailwindCSS",
+    type: "Frameworks",
+    src_img: "tailwindcss/tailwindcss-plain.svg",
+  },
+  {
+    id: 15,
+    name: "Git",
+    type: "Dev Tools",
+    src_img: "git/git-original.svg",
+  },
+  {
+    id: 16,
+    name: "GitHub",
+    type: "Dev Tools",
+    src_img: "github/github-original.svg",
+  },
+  {
+    id: 17,
+    name: "Docker",
+    type: "Dev Tools",
+    src_img: "docker/docker-original.svg",
+  },
+  {
+    id: 18,
+    name: "Jenkins",
+    type: "Dev Tools",
+    src_img: "jenkins/jenkins-original.svg",
+  },
+];
+
+const types = [
+  { id: 0, type: "Languages" },
+  { id: 1, type: "Frameworks" },
+  { id: 2, type: "Databases" },
+  { id: 3, type: "Dev Tools" },
+];
+
+const getSkills = (type: string): Skill[] => {
+  return skills.filter((skill) => skill.type === type);
+};
+</script>
 
 <style>
 .skills {
