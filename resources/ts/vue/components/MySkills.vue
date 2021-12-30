@@ -70,7 +70,7 @@ const skills: Skill[] = [
   {
     id: 6,
     name: "Java",
-    type: "Databases",
+    type: "Languages",
     src_img: "java/java-original.svg",
   },
   {

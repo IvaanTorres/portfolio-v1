@@ -1,5 +1,5 @@
 <template>
-  <section class="p-10 flex justify-center bg-gray-200">
+  <section class="p-10 px-20 md:px-40 flex justify-around bg-gray-200">
     <div
       v-for="social of socialGroup"
       :key="social.id"
