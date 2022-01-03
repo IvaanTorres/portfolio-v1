@@ -33,7 +33,7 @@
         </div>
       </div>
       <div class="col-span-3 md:col-span-2">
-        <h1 class="text-3xl mb-5 font-extrabold">Title</h1>
+        <h1 class="text-3xl mb-5 font-extrabold">hey</h1>
         <p class="mb-5">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis at,
           repellendus ullam iure harum ut placeat et quidem! Laborum, corrupti.
@@ -69,13 +69,10 @@
 </template>
 
 <script lang="ts" setup>
-import { ref } from "vue";
 import { useRoute } from "vue-router";
 const router = useRoute();
-
 //! INTERFACES
 import Project from "../../interfaces/Project";
-
 //! COMPONENTS
 import SkillTag from "../components/partials/SkillTag.vue";
 

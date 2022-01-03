@@ -5,7 +5,7 @@
       <div class="grid grid-cols-1 lg:grid-cols-3 grid-rows-2 bg-white">
         <ProjectComp
           v-for="(project, index) of mainProjects"
-          :key="index"
+          :key="project.id"
           :index="index"
           :data="project"
         />

@@ -15,24 +15,24 @@ class ProjectController extends Controller
     public function index()
     {
         $project = Project::findOrFail(1);
-        dd($project->teches);
+        dd($project->skills);
     }
 
     public function getMain()
     {
         $project = Project::findOrFail(1);
-        dd($project->teches);
+        dd($project->skills);
     }
 
     public function getByType()
     {
         $project = Project::findOrFail(1);
-        dd($project->teches);
+        dd($project->skills);
     }
 
     public function find()
     {
         $project = Project::findOrFail(1);
-        dd($project->teches);
+        dd($project->skills);
     }
 }

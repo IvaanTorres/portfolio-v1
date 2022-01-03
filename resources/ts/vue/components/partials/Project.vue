@@ -44,7 +44,7 @@
 </template>
 
 <script lang="ts" setup>
-import { PropType, ref, onMounted, computed } from "vue";
+import { PropType, ref, onMounted } from "vue";
 //! INTERFACES
 import Project from "../../../interfaces/Project";
 //! COMPONENTS
@@ -60,6 +60,8 @@ const props = defineProps({
     required: true,
   },
 });
+
+const msg = ref("Hello!");
 
 const getProjectUrl = (id: number) => {
   return "/projects/" + id;
