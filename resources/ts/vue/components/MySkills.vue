@@ -29,8 +29,11 @@
 import Skill from "../../interfaces/Skill";
 //! COMPONENTS
 import SkillsBlock from "./partials/SkillsBlock.vue";
+//! SERVICES
+import { all } from "../../services/Skill";
+import { onMounted, ref } from "vue";
 
-const skills: Skill[] = [
+/* const skills: Skill[] = [
   {
     id: 0,
     name: "HTML",
@@ -145,7 +148,9 @@ const skills: Skill[] = [
     type: "Dev Tools",
     src_img: "jenkins/jenkins-original.svg",
   },
-];
+]; */
+
+let skills = ref<Skill[]>();
 
 const types = [
   { id: 0, type: "Languages" },
@@ -154,9 +159,16 @@ const types = [
   { id: 3, type: "Dev Tools" },
 ];
 
-const getSkills = (type: string): Skill[] => {
-  return skills.filter((skill) => skill.type === type);
+const getSkills = async (type: string) => {
+  const skillsGroup = await all(type);
+  skills.value = skillsGroup.data;
+  console.log(skills.value);
+  return skills.value;
 };
+
+onMounted(async () => {
+  await getSkills("Languages");
+});
 </script>
 
 <style>
