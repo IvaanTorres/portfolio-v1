@@ -5,14 +5,14 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class ProjectTech extends Model
+class ProjectSkill extends Model
 {
     use HasFactory;
-    protected $table = "project_teches";
+    protected $table = "project_skills";
 
-    /*
-    function __construct($project_id, $tech_id){
+
+    function __construct($project_id, $skill_id){
       $this->project_id = $project_id;
-      $this->tech_id = $tech_id;
-    } */
+      $this->skill_id = $skill_id;
+    }
 }

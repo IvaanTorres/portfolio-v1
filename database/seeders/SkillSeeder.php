@@ -14,13 +14,14 @@ class SkillSeeder extends Seeder
      */
     public function run()
     {
-        /* $html = new Skill('HTML', 'lang', 'html5/html5-original-wordmark.svg');
-        $css = new Skill('CSS', 'lang', 'css3/css3-original-wordmark.svg');
-        $js = new Skill('JavaScript', 'lang', 'javascript/javascript-original.svg');
-        $ts = new Skill('TypeScript', 'lang', 'typescript/typescript-original.svg');
-        $sass = new Skill('SASS', 'lang', 'sass/sass-original.svg');
-        $php = new Skill('PHP', 'lang', 'php/php-original.svg');
-        $java = new Skill('Java', 'lang', 'java/java-original.svg');
+        /* $html = new Skill('HTML', 'Languages', 'html5/html5-original-wordmark.svg');
+        $css = new Skill('CSS', 'Languages', 'css3/css3-original-wordmark.svg');
+        $js = new Skill('JavaScript', 'Languages', 'javascript/javascript-original.svg');
+        $ts = new Skill('TypeScript', 'Languages', 'typescript/typescript-original.svg');
+        $sass = new Skill('SASS', 'Languages', 'sass/sass-original.svg');
+        $php = new Skill('PHP', 'Languages', 'php/php-original.svg');
+        $java = new Skill('Java', 'Languages', 'java/java-original.svg');
+        $bash = new Skill('Shell Script/Bash', 'Languages', 'bash/bash-original.svg');
         $html->save();
         $css->save();
         $js->save();
@@ -28,20 +29,19 @@ class SkillSeeder extends Seeder
         $sass->save();
         $php->save();
         $java->save();
+        $bash->save();
 
-        $mysql = new Skill('MySQL', 'db', 'mysql/mysql-original-wordmark.svg');
-        $postgresql = new Skill('PostgreSQL', 'db', 'postgresql/postgresql-original.svg');
-        $mongodb = new Skill('MongoDB', 'db', 'mongodb/mongodb-original.svg');
+        $mysql = new Skill('MySQL', 'Databases', 'mysql/mysql-original-wordmark.svg');
+        $mongodb = new Skill('MongoDB', 'Databases', 'mongodb/mongodb-original.svg');
         $mysql->save();
-        $postgresql->save();
         $mongodb->save();
 
-        $angular = new Skill('Angular', 'framework', 'angularjs/angularjs-original.svg');
-        $vue = new Skill('VueJS', 'framework', 'vuejs/vuejs-original.svg');
-        $laravel = new Skill('Laravel', 'framework', 'laravel/laravel-plain.svg');
-        $expressJS = new Skill('ExpressJS', 'framework', 'express/express-original.svg');
-        $jquery = new Skill('JQuery', 'framework', 'jquery/jquery-original-wordmark.svg');
-        $tailwindcss = new Skill('TailwindCSS', 'framework', 'tailwindcss/tailwindcss-plain.svg');
+        $angular = new Skill('Angular', 'Frameworks', 'angularjs/angularjs-original.svg');
+        $vue = new Skill('VueJS', 'Frameworks', 'vuejs/vuejs-original.svg');
+        $laravel = new Skill('Laravel', 'Frameworks', 'laravel/laravel-plain.svg');
+        $expressJS = new Skill('ExpressJS', 'Frameworks', 'express/express-original.svg');
+        $jquery = new Skill('JQuery', 'Frameworks', 'jquery/jquery-original-wordmark.svg');
+        $tailwindcss = new Skill('TailwindCSS', 'Frameworks', 'tailwindcss/tailwindcss-plain.svg');
         $angular->save();
         $vue->save();
         $laravel->save();
@@ -49,10 +49,10 @@ class SkillSeeder extends Seeder
         $jquery->save();
         $tailwindcss->save();
 
-        $git = new Skill('Git', 'dev', 'git/git-original.svg');
-        $github = new Skill('GitHub', 'dev', 'github/github-original.svg');
-        $docker = new Skill('Docker', 'dev', 'docker/docker-original.svg');
-        $jenkins = new Skill('Jenkins', 'dev', 'jenkins/jenkins-original.svg');
+        $git = new Skill('Git', 'Dev Tools', 'git/git-original.svg');
+        $github = new Skill('GitHub', 'Dev Tools', 'github/github-original.svg');
+        $docker = new Skill('Docker', 'Dev Tools', 'docker/docker-original.svg');
+        $jenkins = new Skill('Jenkins', 'Dev Tools', 'jenkins/jenkins-original.svg');
         $git->save();
         $github->save();
         $docker->save();

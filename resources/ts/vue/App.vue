@@ -9,18 +9,7 @@
       <div :class="navResponsive()">
         <font-awesome-icon
           :icon="['fas', 'times']"
-          class="
-            absolute
-            top-0
-            right-0
-            m-10
-            mt-6
-            lg:hidden
-            text-white
-            my-3
-            text-4xl
-            cursor-pointer
-          "
+          class="absolute top-0 right-0 m-10 mt-6 lg:hidden text-white my-3 text-4xl cursor-pointer"
           @click="toggleHamburguer()"
         />
         <router-link
@@ -61,14 +50,7 @@
       <router-view />
     </main>
     <footer
-      class="
-        flex flex-col
-        md:flex-row md:justify-between
-        w-full
-        bg-black
-        text-white
-        p-6
-      "
+      class="flex flex-col md:flex-row md:justify-between w-full bg-black text-white p-6"
     >
       <p class="hidden md:inline-block text-sm py-2">
         Iván Torres García - ivantorresgarcia.02@gmail.com
@@ -144,7 +126,6 @@ a.router-link-exact-active {
 }
 * {
   font-family: "Sora";
-  scroll-behavior: smooth;
 }
 .l-page {
   display: grid;

@@ -17,7 +17,7 @@ class CreateProjectSkillsTable extends Migration
             $table->id();
             $table->foreignId('project_id')->constrained()->onUpdate('cascade')->onDelete('cascade');
             $table->foreignId('skill_id')->constrained()->onUpdate('cascade')->onDelete('cascade');
-            //$table->timestamps();
+            $table->timestamps();
         });
     }
 
