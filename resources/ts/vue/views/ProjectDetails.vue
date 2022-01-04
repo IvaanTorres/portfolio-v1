@@ -25,7 +25,7 @@
         <p class="mb-5">
           {{ project?.description }}
         </p>
-        <p class="font-semibold mb-5">Created at: 30/01/2022</p>
+        <p class="font-semibold mb-5">Created at: {{ project?.creation }}</p>
         <div class="flex flex-wrap gap-2">
           <SkillTag
             v-for="skill of project?.skills"

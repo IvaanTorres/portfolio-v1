@@ -14,7 +14,7 @@ class SkillSeeder extends Seeder
      */
     public function run()
     {
-        /* $html = new Skill('HTML', 'Languages', 'html5/html5-original-wordmark.svg');
+        $html = new Skill('HTML', 'Languages', 'html5/html5-original-wordmark.svg');
         $css = new Skill('CSS', 'Languages', 'css3/css3-original-wordmark.svg');
         $js = new Skill('JavaScript', 'Languages', 'javascript/javascript-original.svg');
         $ts = new Skill('TypeScript', 'Languages', 'typescript/typescript-original.svg');
@@ -56,6 +56,6 @@ class SkillSeeder extends Seeder
         $git->save();
         $github->save();
         $docker->save();
-        $jenkins->save(); */
+        $jenkins->save();
     }
 }

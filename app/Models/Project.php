@@ -10,12 +10,13 @@ class Project extends Model
     use HasFactory;
     protected $table = "projects";
 
-    /* function __construct($name, $description, $link_repo, $isDev, $isMain){
+    /* function __construct($name, $description, $link_repo, $isDev, $isMain, $creation){
       $this->name = $name;
       $this->description = $description;
       $this->link_repo = $link_repo;
       $this->isDev = $isDev;
       $this->isMain = $isMain;
+      $this->creation = $creation;
     } */
 
     function skills(){

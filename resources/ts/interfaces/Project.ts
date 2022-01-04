@@ -11,4 +11,5 @@ export default interface Project {
   link_yt?: string;
   isDev: boolean;
   isMain: boolean;
+  creation: Date;
 }

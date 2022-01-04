@@ -23,7 +23,7 @@ class CreateProjectsTable extends Migration
             $table->string('link_yt')->nullable();
             $table->boolean('isDev');
             $table->boolean('isMain');
-            $table->date('creation')->nullable();
+            $table->date('creation');
             $table->timestamps();
         });
     }
