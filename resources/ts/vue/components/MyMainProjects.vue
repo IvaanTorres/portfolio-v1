@@ -19,45 +19,24 @@
 import Project from "../../interfaces/Project";
 //! COMPONENTS
 import ProjectComp from "./partials/Project.vue";
+//! SERVICES
+import { getMain } from "../../services/Project";
+import { onMounted, ref } from "vue";
 
-//Get Main Projects from DB
 const mainProjects: Project[] = [
   {
-    id: 0,
+    id: 1,
     name: "Travel Agency",
     description: "This is the description",
     skills: [
       {
-        id: 0,
+        id: 1,
         name: "HTML",
         type: "Languages",
         src_img: "html5/html5-original-wordmark.svg",
       },
       {
-        id: 1,
-        name: "CSS",
-        type: "Languages",
-        src_img: "css3/css3-original-wordmark.svg",
-      },
-    ],
-    src_img: "",
-    link_repo: "https://www.google.es",
-    isDev: true,
-    isMain: true,
-  },
-  {
-    id: 1,
-    name: "TO-DO App",
-    description: "This is the description",
-    skills: [
-      {
-        id: 0,
-        name: "HTML",
-        type: "Languages",
-        src_img: "html5/html5-original-wordmark.svg",
-      },
-      {
-        id: 1,
+        id: 2,
         name: "CSS",
         type: "Languages",
         src_img: "css3/css3-original-wordmark.svg",
@@ -70,17 +49,17 @@ const mainProjects: Project[] = [
   },
   {
     id: 2,
-    name: "Portfolio",
+    name: "TO-DO App",
     description: "This is the description",
     skills: [
       {
-        id: 0,
+        id: 1,
         name: "HTML",
         type: "Languages",
         src_img: "html5/html5-original-wordmark.svg",
       },
       {
-        id: 1,
+        id: 2,
         name: "CSS",
         type: "Languages",
         src_img: "css3/css3-original-wordmark.svg",
@@ -89,6 +68,29 @@ const mainProjects: Project[] = [
     src_img: "",
     link_repo: "https://www.google.es",
     isDev: true,
+    isMain: true,
+  },
+  {
+    id: 3,
+    name: "Portfolio",
+    description: "This is the description",
+    skills: [
+      {
+        id: 1,
+        name: "HTML",
+        type: "Languages",
+        src_img: "html5/html5-original-wordmark.svg",
+      },
+      {
+        id: 2,
+        name: "CSS",
+        type: "Languages",
+        src_img: "css3/css3-original-wordmark.svg",
+      },
+    ],
+    src_img: "",
+    link_repo: "https://www.google.es",
+    isDev: false,
     isMain: true,
   },
 ];

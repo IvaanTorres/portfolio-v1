@@ -1,12 +1,6 @@
 <template>
   <div
-    class="
-      flex flex-col
-      relative
-      px-9
-      border-b-2 border-black
-      lg:border-b-0 lg:border-r-2 lg:border-black
-    "
+    class="flex flex-col relative px-9 border-b-2 border-black lg:border-b-0 lg:border-r-2 lg:border-black"
   >
     <h3 class="text-center lg:p-5 mb-5 lg:mb-0 pt-10 text-xl font-bold">
       {{ data.name }}
@@ -19,19 +13,7 @@
       />
     </div>
     <router-link
-      class="
-        inline
-        mt-8
-        bg-gray-800
-        hover:bg-gray-900
-        px-10
-        py-2
-        text-white text-sm
-        m-auto
-        mb-10
-        lg:mb-3
-        rounded-full
-      "
+      class="inline mt-8 bg-gray-800 hover:bg-gray-900 px-10 py-2 text-white text-sm m-auto mb-10 lg:mb-3 rounded-full"
       :to="getProjectUrl(data.id)"
       >Open</router-link
     >
@@ -45,6 +27,8 @@
 
 <script lang="ts" setup>
 import { PropType, ref, onMounted } from "vue";
+import { useRoute } from "vue-router";
+const router = useRoute();
 //! INTERFACES
 import Project from "../../../interfaces/Project";
 //! COMPONENTS
@@ -61,10 +45,10 @@ const props = defineProps({
   },
 });
 
-const msg = ref("Hello!");
-
 const getProjectUrl = (id: number) => {
-  return "/projects/" + id;
+  return props.data.isDev === true
+    ? "/projects/dev/" + id
+    : "/projects/design/" + id;
 };
 
 //! ERROR: THE LOCK ISSN'T UPDATING AUTO ITS DISPLAY WHEN CHANGING THE WINDOW WIDTH

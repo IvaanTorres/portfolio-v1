@@ -2,17 +2,7 @@
   <section id="skills" class="skills mt-10 py-5 pb-10">
     <h2 class="text-center font-bold text-3xl text-white mb-14">Skills</h2>
     <div
-      class="
-        grid grid-cols-1
-        sm:grid-cols-2
-        xl:grid-cols-4
-        gap-5
-        md:gap-10
-        mx-3
-        md:mx-10
-        lg:mx-20
-        m-auto
-      "
+      class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-5 md:gap-10 mx-3 md:mx-10 lg:mx-20 m-auto"
     >
       <SkillsBlock
         v-for="t of types"
@@ -31,9 +21,15 @@ import Skill from "../../interfaces/Skill";
 import SkillsBlock from "./partials/SkillsBlock.vue";
 //! SERVICES
 import { all } from "../../services/Skill";
-import { onMounted, ref } from "vue";
 
-/* const skills: Skill[] = [
+const types = [
+  { id: 0, type: "Languages" },
+  { id: 1, type: "Frameworks" },
+  { id: 2, type: "Databases" },
+  { id: 3, type: "Dev Tools" },
+];
+
+const skills: Skill[] = [
   {
     id: 0,
     name: "HTML",
@@ -148,27 +144,11 @@ import { onMounted, ref } from "vue";
     type: "Dev Tools",
     src_img: "jenkins/jenkins-original.svg",
   },
-]; */
-
-let skills = ref<Skill[]>();
-
-const types = [
-  { id: 0, type: "Languages" },
-  { id: 1, type: "Frameworks" },
-  { id: 2, type: "Databases" },
-  { id: 3, type: "Dev Tools" },
 ];
 
-const getSkills = async (type: string) => {
-  const skillsGroup = await all(type);
-  skills.value = skillsGroup.data;
-  console.log(skills.value);
-  return skills.value;
+const getSkills = (type: string) => {
+  return skills.filter((t) => t.type === type);
 };
-
-onMounted(async () => {
-  await getSkills("Languages");
-});
 </script>
 
 <style>

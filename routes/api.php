@@ -23,10 +23,10 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::get('/skills/{type}', [SkillController::class, 'index'])->name('skills');
 
+Route::get('/projects/main', [ProjectController::class, 'getMain'])->name('main_projects');
 Route::get('/projects/{type}', [ProjectController::class, 'getByType'])
   ->where(['type' => '[a-z]+'])
   ->name('projects'); //Development || Design
-Route::get('/projects/main', [ProjectController::class, 'getMain'])->name('main_projects');
 Route::get('/projects/{type}/{id}', [ProjectController::class, 'find'])
   ->where(['type' => '[a-z]+', 'id' => '[0-9]+'])
   ->name('project_details'); //

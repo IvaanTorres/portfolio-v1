@@ -9,21 +9,8 @@
         harum quo!
       </p>
       <router-link
-        class="
-          inline-block
-          mt-6
-          bg-black
-          shadow-lg shadow-gray-900
-          hover:shadow-xl hover:shadow-gray-900
-          px-10
-          py-3
-          rounded-full
-          ease-in
-          duration-150
-          text-white
-          font-bold
-        "
-        to="/projects"
+        class="inline-block mt-6 bg-black shadow-lg shadow-gray-900 hover:shadow-xl hover:shadow-gray-900 px-10 py-3 rounded-full ease-in duration-150 text-white font-bold"
+        to="/projects/dev"
         >Open</router-link
       >
     </div>
@@ -38,21 +25,8 @@
         harum quo!
       </p>
       <router-link
-        class="
-          inline-block
-          mt-6
-          bg-black
-          shadow-lg shadow-gray-900
-          hover:shadow-xl hover:shadow-gray-900
-          px-10
-          py-3
-          rounded-full
-          ease-in
-          duration-150
-          text-white
-          font-bold
-        "
-        to="/projects"
+        class="inline-block mt-6 bg-black shadow-lg shadow-gray-900 hover:shadow-xl hover:shadow-gray-900 px-10 py-3 rounded-full ease-in duration-150 text-white font-bold"
+        to="/projects/design"
         >Open</router-link
       >
       <img

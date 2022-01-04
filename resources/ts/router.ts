@@ -11,12 +11,14 @@ const routes: Array<RouteRecordRaw> = [
     component: Home,
   },
   {
-    path: "/projects",
+    path: "/projects/dev",
+    alias: "/projects/design",
     name: "Projects List",
     component: ProjectsList,
   },
   {
-    path: "/projects/:id",
+    path: "/projects/dev/:id",
+    alias: "/projects/design/:id",
     name: "Project Details",
     component: ProjectDetails,
   },
