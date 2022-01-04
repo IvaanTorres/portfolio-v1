@@ -2,27 +2,10 @@
   <header class="relative">
     <MyParticles />
     <div
-      class="
-        flex
-        justify-center
-        sm:justify-start
-        items-center
-        w-full
-        h-screen
-        absolute
-        top-0
-        z-30
-      "
+      class="flex justify-center sm:justify-start items-center w-full h-screen absolute top-0 z-30"
     >
       <div
-        class="
-          text-center
-          sm:text-left sm:mt-14
-          md:mt-10
-          sm:ml-16
-          md:ml-24
-          text-white
-        "
+        class="text-center sm:text-left sm:mt-14 md:mt-10 sm:ml-16 md:ml-24 text-white"
       >
         <p class="sm:hidden md:inline-block mb-4">Welcome</p>
         <h1 class="text-3xl sm:text-5xl md:text-6xl mb-5 font-extrabold">
@@ -31,18 +14,7 @@
         <h2 class="subtitle text-xl sm:text-3xl mb-10">Full-Stack Developer</h2>
         <a
           href="#"
-          class="
-            inline-block
-            px-14
-            py-3
-            bg-yellow-300
-            hover:bg-yellow-400
-            text-black
-            font-bold
-            ease-in
-            duration-75
-            rounded-full
-          "
+          class="inline-block px-14 py-3 bg-yellow-300 hover:bg-yellow-400 text-black font-bold ease-in duration-75 rounded-full"
           >Download CV</a
         >
         <p class="rotate-90 hidden sm:block absolute right-0 top-2/4">

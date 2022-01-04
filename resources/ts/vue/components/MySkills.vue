@@ -5,6 +5,7 @@
       class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-5 md:gap-10 mx-3 md:mx-10 lg:mx-20 m-auto"
     >
       <SkillsBlock
+        data-aos="zoom-in-up"
         v-for="t of types"
         :key="t.id"
         :title="t.type"

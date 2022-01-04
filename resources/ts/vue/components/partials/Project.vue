@@ -1,5 +1,6 @@
 <template>
   <div
+    data-aos="zoom-in-up"
     class="flex flex-col relative px-9 border-b-2 border-black lg:border-b-0 lg:border-r-2 lg:border-black"
   >
     <h3 class="text-center lg:p-5 mb-5 lg:mb-0 pt-10 text-xl font-bold">

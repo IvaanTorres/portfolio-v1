@@ -9,10 +9,12 @@ import { far } from "@fortawesome/free-regular-svg-icons";
 import { fab } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 
+import * as Aos from "aos";
+import "aos/dist/aos.css";
+Aos.init();
+
 library.add(fas, far, fab);
 
-//We specify the root file is App.vue and will be loaded in #app.
-//We specify we want to use the router in our app
 createApp(App)
   .use(router)
   .component("font-awesome-icon", FontAwesomeIcon)
