@@ -8,7 +8,7 @@
         v-for="t of types"
         :key="t.id"
         :title="t.type"
-        :data="getSkills(t.type)"
+        :data="filterSkills(t.type)"
       />
     </div>
   </section>
@@ -21,6 +21,11 @@ import Skill from "../../interfaces/Skill";
 import SkillsBlock from "./partials/SkillsBlock.vue";
 //! SERVICES
 import { all } from "../../services/Skill";
+import { onMounted, ref } from "vue";
+
+onMounted(() => {
+  getSkills();
+});
 
 const types = [
   { id: 0, type: "Languages" },
@@ -29,125 +34,16 @@ const types = [
   { id: 3, type: "Dev Tools" },
 ];
 
-const skills: Skill[] = [
-  {
-    id: 0,
-    name: "HTML",
-    type: "Languages",
-    src_img: "html5/html5-original-wordmark.svg",
-  },
-  {
-    id: 1,
-    name: "CSS",
-    type: "Languages",
-    src_img: "css3/css3-original-wordmark.svg",
-  },
-  {
-    id: 2,
-    name: "JavaScript",
-    type: "Languages",
-    src_img: "javascript/javascript-original.svg",
-  },
-  {
-    id: 3,
-    name: "TypeScript",
-    type: "Languages",
-    src_img: "typescript/typescript-original.svg",
-  },
-  {
-    id: 4,
-    name: "SASS",
-    type: "Languages",
-    src_img: "sass/sass-original.svg",
-  },
-  {
-    id: 5,
-    name: "PHP",
-    type: "Languages",
-    src_img: "php/php-original.svg",
-  },
-  {
-    id: 6,
-    name: "Java",
-    type: "Languages",
-    src_img: "java/java-original.svg",
-  },
-  {
-    id: 7,
-    name: "MySQL",
-    type: "Databases",
-    src_img: "mysql/mysql-original.svg",
-  },
-  {
-    id: 8,
-    name: "MongoDB",
-    type: "Databases",
-    src_img: "mongodb/mongodb-original.svg",
-  },
-  {
-    id: 9,
-    name: "Angular",
-    type: "Frameworks",
-    src_img: "angularjs/angularjs-original.svg",
-  },
-  {
-    id: 10,
-    name: "VueJS",
-    type: "Frameworks",
-    src_img: "vuejs/vuejs-original.svg",
-  },
-  {
-    id: 11,
-    name: "Laravel",
-    type: "Frameworks",
-    src_img: "laravel/laravel-plain.svg",
-  },
-  {
-    id: 12,
-    name: "ExpressJS",
-    type: "Frameworks",
-    src_img: "express/express-original.svg",
-  },
-  {
-    id: 13,
-    name: "JQuery",
-    type: "Frameworks",
-    src_img: "jquery/jquery-original-wordmark.svg",
-  },
-  {
-    id: 14,
-    name: "TailwindCSS",
-    type: "Frameworks",
-    src_img: "tailwindcss/tailwindcss-plain.svg",
-  },
-  {
-    id: 15,
-    name: "Git",
-    type: "Dev Tools",
-    src_img: "git/git-original.svg",
-  },
-  {
-    id: 16,
-    name: "GitHub",
-    type: "Dev Tools",
-    src_img: "github/github-original.svg",
-  },
-  {
-    id: 17,
-    name: "Docker",
-    type: "Dev Tools",
-    src_img: "docker/docker-original.svg",
-  },
-  {
-    id: 18,
-    name: "Jenkins",
-    type: "Dev Tools",
-    src_img: "jenkins/jenkins-original.svg",
-  },
-];
+const skills = ref<Skill[]>([]);
 
-const getSkills = (type: string) => {
-  return skills.filter((t) => t.type === type);
+const getSkills = async () => {
+  const p = await all();
+  console.log(p.data);
+  skills.value = p.data;
+};
+
+const filterSkills = (type: string) => {
+  return skills.value.filter((s) => s.type === type);
 };
 </script>
 

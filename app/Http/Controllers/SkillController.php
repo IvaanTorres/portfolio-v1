@@ -12,9 +12,9 @@ class SkillController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index($type)
+    public function index()
     {
-      $skills = Skill::where("type", $type)->get();
+      $skills = Skill::all();
       return response()->json($skills, 200);
     }
 }

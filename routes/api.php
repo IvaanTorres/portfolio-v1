@@ -21,7 +21,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/skills/{type}', [SkillController::class, 'index'])->name('skills');
+Route::get('/skills', [SkillController::class, 'index'])->name('skills');
 
 Route::get('/projects/main', [ProjectController::class, 'getMain'])->name('main_projects');
 Route::get('/projects/{type}', [ProjectController::class, 'getByType'])
