@@ -41,7 +41,7 @@ const setProjects = () => {
   if (isDev()) {
     projects.value = [
       {
-        id: 1,
+        id: 2,
         name: "Travel Agency",
         description: "This is the description",
         skills: [
@@ -64,7 +64,7 @@ const setProjects = () => {
         isMain: true,
       },
       {
-        id: 2,
+        id: 1,
         name: "TO-DO App",
         description: "This is the description",
         skills: [

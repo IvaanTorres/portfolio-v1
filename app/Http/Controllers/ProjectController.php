@@ -32,11 +32,14 @@ class ProjectController extends Controller
           $project = Project::where("isDev", 0)->get();
         }
         return response()->json($project, 200);
-    }
+      }
 
-    public function find()
+    public function find($type, $id)
     {
-        $project = Project::findOrFail(1);
-        dd($project->skills);
+      if($type === "development" || $type === "design"){
+        $project = Project::findOrFail($id);
+        $project['skills'] = $project->skills;
+        return response()->json($project, 200);
+      }
     }
 }
