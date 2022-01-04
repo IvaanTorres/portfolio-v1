@@ -46,7 +46,7 @@ const props = defineProps({
 });
 
 const getProjectUrl = (id: number) => {
-  return props.data.isDev === true
+  return props.data.isDev == true
     ? "/projects/dev/" + id
     : "/projects/design/" + id;
 };

@@ -3,8 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Models\Project;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 
 class ProjectController extends Controller
 {
@@ -16,22 +14,27 @@ class ProjectController extends Controller
 
     public function getMain()
     {
-      $data = [];
-      $data['projects'] = Project::where("isMain", 1)->get();
-      foreach ($data['projects'] as $key => $project) {
-        $data['projects'][$key]['skills'] = $project->skills;
+      $projects = Project::where("isMain", 1)->get();
+      foreach ($projects as $key => $project) {
+        $projects[$key]['skills'] = $project->skills;
       }
-      return response()->json($data, 200);
+      return response()->json($projects, 200);
     }
 
     public function getByType($type)
     {
         if($type === "development"){
-          $project = Project::where("isDev", 1)->get();
+          $projects = Project::where("isDev", 1)->get();
+          foreach ($projects as $key => $project) {
+            $projects[$key]['skills'] = $project->skills;
+          }
         }else if($type === "design"){
-          $project = Project::where("isDev", 0)->get();
+          $projects = Project::where("isDev", 0)->get();
+          foreach ($projects as $key => $project) {
+            $projects[$key]['skills'] = $project->skills;
+          }
         }
-        return response()->json($project, 200);
+        return response()->json($projects, 200);
       }
 
     public function find($type, $id)

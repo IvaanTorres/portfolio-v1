@@ -29,188 +29,23 @@ const router = useRoute();
 import Project from "../../interfaces/Project";
 //! COMPONENTS
 import ProjectComp from "../components/partials/Project.vue";
+//! SERVICES
+import { getByType } from "../../services/Project";
 
 onMounted(() => {
   setTitle();
   setProjects();
 });
 
-let projects = ref<Project[]>([]);
-
-const setProjects = () => {
-  if (isDev()) {
-    projects.value = [
-      {
-        id: 2,
-        name: "Travel Agency",
-        description: "This is the description",
-        skills: [
-          {
-            id: 1,
-            name: "HTML",
-            type: "Languages",
-            src_img: "html5/html5-original-wordmark.svg",
-          },
-          {
-            id: 2,
-            name: "CSS",
-            type: "Languages",
-            src_img: "css3/css3-original-wordmark.svg",
-          },
-        ],
-        src_img: "",
-        link_repo: "https://www.google.es",
-        isDev: true,
-        isMain: true,
-      },
-      {
-        id: 1,
-        name: "TO-DO App",
-        description: "This is the description",
-        skills: [
-          {
-            id: 1,
-            name: "HTML",
-            type: "Languages",
-            src_img: "html5/html5-original-wordmark.svg",
-          },
-          {
-            id: 2,
-            name: "CSS",
-            type: "Languages",
-            src_img: "css3/css3-original-wordmark.svg",
-          },
-        ],
-        src_img: "",
-        link_repo: "https://www.google.es",
-        isDev: true,
-        isMain: true,
-      },
-      {
-        id: 3,
-        name: "Portfolio",
-        description: "This is the description",
-        skills: [
-          {
-            id: 1,
-            name: "HTML",
-            type: "Languages",
-            src_img: "html5/html5-original-wordmark.svg",
-          },
-          {
-            id: 2,
-            name: "CSS",
-            type: "Languages",
-            src_img: "css3/css3-original-wordmark.svg",
-          },
-        ],
-        src_img: "",
-        link_repo: "https://www.google.es",
-        isDev: true,
-        isMain: true,
-      },
-      {
-        id: 3,
-        name: "Travel Agency",
-        description: "This is the description",
-        skills: [
-          {
-            id: 1,
-            name: "HTML",
-            type: "Languages",
-            src_img: "html5/html5-original-wordmark.svg",
-          },
-          {
-            id: 2,
-            name: "CSS",
-            type: "Languages",
-            src_img: "css3/css3-original-wordmark.svg",
-          },
-        ],
-        src_img: "",
-        link_repo: "https://www.google.es",
-        isDev: true,
-        isMain: true,
-      },
-      {
-        id: 4,
-        name: "TO-DO App",
-        description: "This is the description",
-        skills: [
-          {
-            id: 1,
-            name: "HTML",
-            type: "Languages",
-            src_img: "html5/html5-original-wordmark.svg",
-          },
-          {
-            id: 2,
-            name: "CSS",
-            type: "Languages",
-            src_img: "css3/css3-original-wordmark.svg",
-          },
-        ],
-        src_img: "",
-        link_repo: "https://www.google.es",
-        isDev: true,
-        isMain: true,
-      },
-      {
-        id: 5,
-        name: "Portfolio",
-        description: "This is the description",
-        skills: [
-          {
-            id: 1,
-            name: "HTML",
-            type: "Languages",
-            src_img: "html5/html5-original-wordmark.svg",
-          },
-          {
-            id: 2,
-            name: "CSS",
-            type: "Languages",
-            src_img: "css3/css3-original-wordmark.svg",
-          },
-        ],
-        src_img: "",
-        link_repo: "https://www.google.es",
-        isDev: true,
-        isMain: true,
-      },
-    ];
-  } else {
-    /* projects.value = [
-      {
-        id: 1,
-        name: "Travel Agency",
-        description: "This is the description",
-        skills: [
-          {
-            id: 1,
-            name: "HTML",
-            type: "Languages",
-            src_img: "html5/html5-original-wordmark.svg",
-          },
-          {
-            id: 2,
-            name: "CSS",
-            type: "Languages",
-            src_img: "css3/css3-original-wordmark.svg",
-          },
-        ],
-        src_img: "",
-        link_repo: "https://www.google.es",
-        isDev: true,
-        isMain: true,
-      },
-    ]; */
-  }
-};
-
 const title = ref<string>("");
 const setTitle = () => {
   title.value = isDev() ? "Web Development" : "Web Design";
+};
+
+const projects = ref<Project[]>([]);
+const setProjects = async () => {
+  let p = isDev() ? await getByType("development") : await getByType("design");
+  projects.value = p.data;
 };
 
 const isDev = () => {

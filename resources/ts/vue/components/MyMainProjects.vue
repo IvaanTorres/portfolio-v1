@@ -23,77 +23,15 @@ import ProjectComp from "./partials/Project.vue";
 import { getMain } from "../../services/Project";
 import { onMounted, ref } from "vue";
 
-const mainProjects: Project[] = [
-  {
-    id: 1,
-    name: "Travel Agency",
-    description: "This is the description",
-    skills: [
-      {
-        id: 1,
-        name: "HTML",
-        type: "Languages",
-        src_img: "html5/html5-original-wordmark.svg",
-      },
-      {
-        id: 2,
-        name: "CSS",
-        type: "Languages",
-        src_img: "css3/css3-original-wordmark.svg",
-      },
-    ],
-    src_img: "",
-    link_repo: "https://www.google.es",
-    isDev: true,
-    isMain: true,
-  },
-  {
-    id: 2,
-    name: "TO-DO App",
-    description: "This is the description",
-    skills: [
-      {
-        id: 1,
-        name: "HTML",
-        type: "Languages",
-        src_img: "html5/html5-original-wordmark.svg",
-      },
-      {
-        id: 2,
-        name: "CSS",
-        type: "Languages",
-        src_img: "css3/css3-original-wordmark.svg",
-      },
-    ],
-    src_img: "",
-    link_repo: "https://www.google.es",
-    isDev: true,
-    isMain: true,
-  },
-  {
-    id: 3,
-    name: "Portfolio",
-    description: "This is the description",
-    skills: [
-      {
-        id: 1,
-        name: "HTML",
-        type: "Languages",
-        src_img: "html5/html5-original-wordmark.svg",
-      },
-      {
-        id: 2,
-        name: "CSS",
-        type: "Languages",
-        src_img: "css3/css3-original-wordmark.svg",
-      },
-    ],
-    src_img: "",
-    link_repo: "https://www.google.es",
-    isDev: false,
-    isMain: true,
-  },
-];
+onMounted(() => {
+  setProjects();
+});
+
+const mainProjects = ref<Project[]>([]);
+const setProjects = async () => {
+  const p = await getMain();
+  mainProjects.value = p.data;
+};
 </script>
 
 <style scoped>
