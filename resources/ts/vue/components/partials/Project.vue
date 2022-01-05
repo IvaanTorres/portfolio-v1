@@ -1,7 +1,7 @@
 <template>
   <div
     data-aos="zoom-in-up"
-    class="flex flex-col relative px-9 border-b-2 border-black lg:border-b-0 lg:border-r-2 lg:border-black"
+    class="flex flex-col justify-between relative px-9 border-b-2 border-black lg:border-b-0 lg:border-r-2 lg:border-black"
   >
     <h3 class="text-center lg:p-5 mb-5 lg:mb-0 pt-10 text-xl font-bold">
       {{ data.name }}
@@ -14,7 +14,7 @@
       />
     </div>
     <router-link
-      class="inline mt-8 bg-gray-800 hover:bg-gray-900 px-10 py-2 text-white text-sm m-auto mb-10 lg:mb-3 rounded-full"
+      class="inline mt-8 bg-gray-800 hover:bg-gray-900 px-10 py-2 text-white text-sm m-auto mb-10 lg:mb-5 rounded-full"
       :to="getProjectUrl(data.id)"
       >Open</router-link
     >
