@@ -13,7 +13,8 @@
         </h1>
         <h2 class="subtitle text-xl sm:text-3xl mb-10">Full-Stack Developer</h2>
         <a
-          href="#"
+          href="https://drive.google.com/file/d/1l9_AEtOa6ED7WyOnsSsxzToOjbDC9zRP/view?usp=sharing"
+          target="_blank"
           class="inline-block px-14 py-3 bg-yellow-300 hover:bg-yellow-400 text-black font-bold ease-in duration-75 rounded-full"
           >Download CV</a
         >

@@ -14,23 +14,19 @@
             About me
           </h2>
           <p class="font-light mb-6">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio
-            illum cum voluptate iusto voluptatem quas quis harum suscipit, eaque
-            doloribus?
+            I am a passionate Full-Stack developer who is completely focused on
+            learning as much as possible everyday. <br />
+            I got to know this world when I was 16 years old and I immediately
+            realized that it was perfect for me since I am someone who considers
+            himself self-taught, ambitious and also outgoing.
           </p>
           <hr />
           <div class="grid mt-6 gap-6">
             <div>
               <p data-aos="fade-right" class="font-bold uppercase text-sm mb-1">
-                Name
+                Name / Old
               </p>
-              <p>Iván Torres García</p>
-            </div>
-            <div>
-              <p data-aos="fade-right" class="font-bold uppercase text-sm mb-1">
-                Old
-              </p>
-              <p>19</p>
+              <p>Iván Torres García / 19</p>
             </div>
             <div>
               <p data-aos="fade-right" class="font-bold uppercase text-sm mb-1">
@@ -47,7 +43,8 @@
           </div>
         </div>
         <a
-          href="#"
+          href="https://drive.google.com/file/d/1l9_AEtOa6ED7WyOnsSsxzToOjbDC9zRP/view?usp=sharing"
+          target="_blank"
           class="inline-block mx-auto sm:mx-0 mt-10 px-14 py-3 bg-gray-800 hover:bg-gray-900 text-white font-bold ease-in duration-75 rounded-full"
           >Download CV</a
         >
