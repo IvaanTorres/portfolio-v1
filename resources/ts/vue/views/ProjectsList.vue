@@ -3,9 +3,7 @@
     <h1 class="text-center font-extrabold text-3xl">{{ title }}</h1>
     <div class="text-center mt-10 mx-5">
       <div v-if="areProjectsLoaded === 0">Loading...</div>
-      <div v-if="areProjectsLoaded === 2">
-        There's no projects on here for the moment !
-      </div>
+      <div v-if="areProjectsLoaded === 2">Projects comming soon !</div>
     </div>
     <div
       v-if="areProjectsLoaded === 1"
