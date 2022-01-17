@@ -4,7 +4,6 @@
     <div class="main-projects mx-5 sm:mx-20 m-auto p-5 sm:p-14 mt-10">
       <div class="grid grid-cols-1 lg:grid-cols-3 bg-white">
         <ProjectComp
-          data-aos="fade-up"
           v-for="(project, index) of mainProjects"
           :key="index"
           :index="index"
@@ -30,8 +29,10 @@ onMounted(() => {
 
 const mainProjects = ref<Project[]>([]);
 const setProjects = async () => {
-  const p = await getMain();
-  mainProjects.value = p.data;
+  if (mainProjects.value.length == 0) {
+    const p = await getMain();
+    mainProjects.value = p.data;
+  }
 };
 </script>
 

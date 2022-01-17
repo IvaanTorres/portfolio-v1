@@ -15,6 +15,7 @@
         <a
           href="https://drive.google.com/file/d/1l9_AEtOa6ED7WyOnsSsxzToOjbDC9zRP/view?usp=sharing"
           target="_blank"
+          rel="noreferrer"
           class="inline-block px-14 py-3 bg-yellow-300 hover:bg-yellow-400 text-black font-bold ease-in duration-75 rounded-full"
           >Download CV</a
         >

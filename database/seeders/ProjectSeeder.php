@@ -19,7 +19,6 @@ class ProjectSeeder extends Seeder
           $travel_agency->description = "Final project developed in team - 1º DAW
 Sol Experience consists in creating packs and experiences for every user who wants to travel to Málaga.
 It has its own admin menu, logging & role system and also, it creates a PDF ticket when a pack is purchased.
-
 Achivement: I learned how to use Java on desktop apps. Also I learned how to load content dynamically using MySQL with it.";
         $todo_app = new Project('TO-DO App', '', 'https://github.com/IvaanTorres/todo-app', 1, 0, Date::createFromFormat('Y-m-d', '2021-12-09'));
           $todo_app->description = "I developed a simple TO-DO app with the goal of starting to learn VueJS 3, my first Front-End Framework.

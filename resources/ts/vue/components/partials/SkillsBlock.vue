@@ -12,6 +12,7 @@
         :src="getSrc(skill.src_img)"
         class="w-10 m-auto"
         :title="skill.name"
+        loading="lazy"
       />
     </div>
   </div>

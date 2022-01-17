@@ -52,9 +52,8 @@ const getProjectUrl = (id: number) => {
     : "/projects/design/" + id;
 };
 
-//! ERROR: THE LOCK ISSN'T UPDATING AUTO ITS DISPLAY WHEN CHANGING THE WINDOW WIDTH
+//! ERROR: THE LOCK ISN'T UPDATING AUTO ITS DISPLAY WHEN CHANGING THE WINDOW WIDTH
 const setClass = () => {
-  //console.log(isLg.value);
   if (isLg.value) {
     if (isMultipleOf3()) {
       return "hidden w-16 absolute bottom-0 left-1/2 -ml-8 translate-y-8 rotate-90 lg:bottom-1/2 lg:left-full lg:-mt-8 lg:rotate-180";

@@ -131,5 +131,6 @@ a.router-link-exact-active {
   display: grid;
   height: 100vh;
   grid-template-rows: auto 1fr auto;
+  white-space: pre-wrap;
 }
 </style>

@@ -6,11 +6,12 @@
       <div class="col-span-3 mb-10">
         <iframe
           class="w-full h-full"
-          src="https://www.youtube.com/embed/BiTuzeyDx6Y"
+          :src="project?.link_yt"
           title="YouTube video player"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen
+          loading="lazy"
         ></iframe>
         <div class="m-3">
           <a :href="project?.link_repo" class="inline-block" target="_blank"

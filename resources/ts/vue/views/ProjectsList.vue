@@ -1,11 +1,14 @@
 <template>
   <div class="w-full pt-10">
     <h1 class="text-center font-extrabold text-3xl">{{ title }}</h1>
-    <p v-if="projects.length === 0" class="text-center mt-10 mx-5">
-      There's no projects on here for the moment !
-    </p>
+    <div class="text-center mt-10 mx-5">
+      <div v-if="areProjectsLoaded === 0">Loading...</div>
+      <div v-if="areProjectsLoaded === 2">
+        There's no projects on here for the moment !
+      </div>
+    </div>
     <div
-      v-if="projects.length !== 0"
+      v-if="areProjectsLoaded === 1"
       class="main-projects p-5 mx-5 md:mx-20 md:p-12 mt-10"
     >
       <div class="grid grid-cols-1 lg:grid-cols-3 bg-white">
@@ -43,9 +46,15 @@ const setTitle = () => {
 };
 
 const projects = ref<Project[]>([]);
+const areProjectsLoaded = ref<Number>(0);
 const setProjects = async () => {
-  let p = isDev() ? await getByType("development") : await getByType("design");
-  projects.value = p.data;
+  if (projects.value.length == 0) {
+    let p = isDev()
+      ? await getByType("development")
+      : await getByType("design");
+    projects.value = p.data;
+    areProjectsLoaded.value = projects.value.length > 0 ? 1 : 2;
+  }
 };
 
 const isDev = () => {

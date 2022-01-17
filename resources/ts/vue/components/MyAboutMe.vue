@@ -6,6 +6,7 @@
         alt="Profile photo"
         width="100%"
         height="100%"
+        loading="lazy"
       />
       <div class="flex items-start justify-between flex-col text-sm w-100">
         <div>
