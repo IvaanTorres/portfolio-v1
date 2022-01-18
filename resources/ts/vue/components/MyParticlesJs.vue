@@ -10,8 +10,6 @@ export default {
   name: "app",
 
   mounted() {
-    console.log("mounted");
-
     particlesJS(
       "particles-js",
 

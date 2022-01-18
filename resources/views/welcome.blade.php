@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" translate="no">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,10 +9,10 @@
         <meta name="author" content="IvaanTorres">
         <meta name="description" content="This portfolio is where I show my main web projects to everyone.">
         <meta name="robots" content="index,follow">
-        <link rel="canonical" href="https://ivantorres.dev">
+        <link rel="canonical" href="https://ivantorresweb.com">
         <meta property="og:title" content="Iván Torres García - Full-Stack Developer - Portfolio">
         <meta property="og:site_name" content="Iván Torres García">
-        <meta property="og:url" content="https://ivantorres.dev">
+        <meta property="og:url" content="https://ivantorresweb.com">
         <meta property="og:description" content="This portfolio is where I show my main web projects to everyone.">
         <meta property="og:type" content="website">
 

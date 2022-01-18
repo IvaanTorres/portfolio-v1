@@ -39,7 +39,6 @@ const skills = ref<Skill[]>([]);
 
 const getSkills = async () => {
   const p = await all();
-  console.log(p.data);
   skills.value = p.data;
 };
 

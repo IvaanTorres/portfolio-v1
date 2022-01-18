@@ -18,11 +18,7 @@
       :to="getProjectUrl(data.id)"
       >Open</router-link
     >
-    <img
-      src="../../../../assets/img/attach.svg"
-      alt="lock"
-      :class="setClass()"
-    />
+    <img :src="lockPath()" alt="lock" :class="setClass()" />
   </div>
 </template>
 
@@ -45,6 +41,17 @@ const props = defineProps({
     required: true,
   },
 });
+
+const projectList = () => {
+  return (
+    router.fullPath === "/projects/dev" ||
+    router.fullPath === "/projects/design"
+  );
+};
+
+const lockPath = () => {
+  return projectList() ? "../images/attach.svg" : "images/attach.svg";
+};
 
 const getProjectUrl = (id: number) => {
   return props.data.isDev == true
@@ -78,7 +85,6 @@ let isLg = ref(windowWidth.value >= 1024);
 onMounted(() => {
   window.onresize = () => {
     windowWidth.value = window.innerWidth;
-    //console.log(windowWidth.value);
     setClass();
     isLg.value = windowWidth.value >= 1024;
   };

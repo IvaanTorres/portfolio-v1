@@ -22,14 +22,14 @@
         </div>
       </div>
       <div class="col-span-3 md:col-span-2">
-        <h1 class="text-3xl mb-5 font-extrabold">{{ project?.name }}</h1>
+        <h1 class="text-3xl mb-5 font-extrabold">{{ project!.name }}</h1>
         <p class="mb-5">
           {{ project?.description }}
         </p>
         <p class="font-semibold mb-5">Created at: {{ project?.creation }}</p>
         <div class="flex flex-wrap gap-2">
           <SkillTag
-            v-for="skill of project?.skills"
+            v-for="skill of project!.skills"
             :key="skill.id"
             :name="skill.name"
           />
