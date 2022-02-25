@@ -23,13 +23,14 @@
 </template>
 
 <script lang="ts" setup>
-import { PropType, ref, onMounted } from "vue";
-import { useRoute } from "vue-router";
-const router = useRoute();
 //! INTERFACES
 import Project from "../../../interfaces/Project";
 //! COMPONENTS
 import SkillTag from "./SkillTag.vue";
+
+import { PropType, ref, onMounted } from "vue";
+import { useRoute } from "vue-router";
+const router = useRoute();
 
 const props = defineProps({
   data: {
@@ -37,6 +38,10 @@ const props = defineProps({
     required: true,
   },
   index: {
+    type: Number,
+    required: true,
+  },
+  last: {
     type: Number,
     required: true,
   },
@@ -62,21 +67,22 @@ const getProjectUrl = (id: number) => {
 //! ERROR: THE LOCK ISN'T UPDATING AUTO ITS DISPLAY WHEN CHANGING THE WINDOW WIDTH
 const setClass = () => {
   if (isLg.value) {
-    if (isMultipleOf3()) {
+    if (isMultipleOf(3)) {
       return "hidden w-16 absolute bottom-0 left-1/2 -ml-8 translate-y-8 rotate-90 lg:bottom-1/2 lg:left-full lg:-mt-8 lg:rotate-180";
     } else {
       return "w-16 absolute bottom-0 left-1/2 -ml-8 translate-y-8 rotate-90 lg:bottom-1/2 lg:left-full lg:-mt-8 lg:rotate-180";
     }
   } else {
-    if (props.index === 5) {
+    if (props.index === props.last - 1) {
       return "hidden w-16 absolute bottom-0 left-1/2 -ml-8 translate-y-8 rotate-90 lg:bottom-1/2 lg:left-full lg:-mt-8 lg:rotate-180";
+    } else {
+      return "w-16 absolute bottom-0 left-1/2 -ml-8 translate-y-8 rotate-90 lg:bottom-1/2 lg:left-full lg:-mt-8 lg:rotate-180";
     }
-    return "w-16 absolute bottom-0 left-1/2 -ml-8 translate-y-8 rotate-90 lg:bottom-1/2 lg:left-full lg:-mt-8 lg:rotate-180";
   }
 };
 
-const isMultipleOf3 = () => {
-  return (props.index + 1) % 3 === 0;
+const isMultipleOf = (num) => {
+  return (props.index + 1) % num === 0;
 };
 
 const windowWidth = ref(window.innerWidth);
@@ -86,7 +92,6 @@ onMounted(() => {
   window.onresize = () => {
     windowWidth.value = window.innerWidth;
     setClass();
-    isLg.value = windowWidth.value >= 1024;
   };
 });
 </script>

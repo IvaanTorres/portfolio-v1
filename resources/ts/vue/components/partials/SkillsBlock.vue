@@ -9,7 +9,7 @@
       <img
         v-for="skill of data"
         :key="skill.id"
-        :src="getSrc(skill.src_img)"
+        :src="skill.src_img"
         class="w-10 m-auto"
         :title="skill.name"
         loading="lazy"
@@ -33,8 +33,4 @@ const props = defineProps({
     required: true,
   },
 });
-
-const getSrc = (src: string) => {
-  return "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/" + src;
-};
 </script>

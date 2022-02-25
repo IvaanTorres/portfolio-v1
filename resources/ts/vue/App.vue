@@ -65,14 +65,14 @@
         /></a>
         <a
           target="_blank"
-          href="https://www.linkedin.com/in/ivan-torres-garcia/"
+          href="https://github.com/IvaanTorres"
           class="hover:text-gray-300 ease-in duration-100"
           rel="noreferrer"
           ><font-awesome-icon :icon="['fab', 'github']"
         /></a>
         <a
           target="_blank"
-          href="https://www.linkedin.com/in/ivan-torres-garcia/"
+          href="https://dev.to/ivaantorres"
           class="hover:text-gray-300 ease-in duration-100"
           rel="noreferrer"
           ><font-awesome-icon :icon="['fab', 'dev']"

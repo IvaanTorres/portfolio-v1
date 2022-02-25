@@ -15,6 +15,7 @@
           :key="project.id"
           :index="index"
           :data="project"
+          :last="projects.length"
         />
       </div>
     </div>
@@ -23,15 +24,16 @@
 </template>
 
 <script lang="ts" setup>
-import { onMounted, ref } from "vue";
-import { useRoute } from "vue-router";
-const router = useRoute();
 //! INTERFACES
 import Project from "../../interfaces/Project";
 //! COMPONENTS
 import ProjectComp from "../components/partials/Project.vue";
 //! SERVICES
 import { getByType } from "../../services/Project";
+
+import { onMounted, ref } from "vue";
+import { useRoute } from "vue-router";
+const router = useRoute();
 
 onMounted(() => {
   setTitle();

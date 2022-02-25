@@ -8,6 +8,7 @@
           :key="index"
           :index="index"
           :data="project"
+          :last="mainProjects.length"
         />
       </div>
     </div>

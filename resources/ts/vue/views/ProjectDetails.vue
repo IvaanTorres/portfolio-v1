@@ -22,7 +22,7 @@
         </div>
       </div>
       <div class="col-span-3 md:col-span-2">
-        <h1 class="text-3xl mb-5 font-extrabold">{{ project!.name }}</h1>
+        <h1 class="text-3xl mb-5 font-extrabold">{{ project?.name }}</h1>
         <p class="mb-5">
           {{ project?.description }}
         </p>
@@ -40,15 +40,16 @@
 </template>
 
 <script lang="ts" setup>
-import { useRoute } from "vue-router";
-const router = useRoute();
 //! INTERFACES
 import Project from "../../interfaces/Project";
 //! COMPONENTS
 import SkillTag from "../components/partials/SkillTag.vue";
 //! SERVICES
 import { find } from "../../services/Project";
+
 import { onMounted, ref } from "vue";
+import { useRoute } from "vue-router";
+const router = useRoute();
 
 onMounted(() => {
   getProject();
